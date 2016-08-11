@@ -56,7 +56,6 @@
                                                 <state key="normal" title="USA"/>
                                                 <connections>
                                                     <action selector="getUSANews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7K-ET-enV"/>
-                                                    <segue destination="uTI-rj-Vy2" kind="show" id="3Xo-6a-tC5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -116,6 +115,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VHj-LD-HEr"/>
+                    <connections>
+                        <segue destination="uTI-rj-Vy2" kind="show" identifier="showArticles" id="X25-0E-713"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
