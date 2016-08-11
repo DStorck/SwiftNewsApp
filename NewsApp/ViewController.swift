@@ -17,9 +17,9 @@ class ViewController: UIViewController {
         assignBackground()
     }
     
+    
     func assignBackground(){
         let background = UIImage(named: "background")
-        
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill
@@ -37,52 +37,22 @@ class ViewController: UIViewController {
 
     @IBAction func getWorldNews(sender: AnyObject) {
         print("let's get the world news!")
-        let url = "http://localhost:3000/section/world"
-        let myUrl = NSURL(string: url)
-        let request = NSMutableURLRequest(URL:myUrl!)
-        request.HTTPMethod = "GET"
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            data, response, error in
-            
-            if error != nil
-            {
-                print("error=\(error)")
-                return
-            }
-            
-            // Print out response string
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("responseString = \(responseString)")
-            print("all done with response string")
-
-            
-            
-            // Convert server json response to NSDictionary
-            do {
-                if let convertedJsonIntoDict = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
-                    
-                    // Print out dictionary
-                    print("dictionary???")
-                    print(convertedJsonIntoDict)
-                    
-                    // Get value by key
-                    //let firstNameValue = convertedJsonIntoDict[0]!["title"] as? String
-                    //print(firstNameValue!)
-                    
+        Alamofire.request(.GET, "http://localhost:3000/section/world")
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    let arr = JSON as! NSArray
+                    for item in arr {
+                        print(item["title"])
+                    }
                 }
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-            
         }
-        
-        task.resume()
         
     }
 
     @IBAction func getUSANews(sender: AnyObject) {
         print("usa news")
-        Alamofire.request(.GET, "http://localhost:3000/fish")
+        Alamofire.request(.GET, "http://localhost:3000/us-news")
             .responseJSON { response in
                 
                 if let JSON = response.result.value {
@@ -97,19 +67,63 @@ class ViewController: UIViewController {
     
     @IBAction func getSeattleNews(sender: AnyObject) {
         print("get some seattle news")
+        Alamofire.request(.GET, "http://localhost:3000/seattle")
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    let arr = JSON as! NSArray
+                    for item in arr {
+                        print(item["title"])
+                    }
+                }
+        }
     }
     
     @IBAction func getPoliticalNews(sender: AnyObject) {
         print("hear how depressing politics are")
+        Alamofire.request(.GET, "http://localhost:3000/section/politics")
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    let arr = JSON as! NSArray
+                    for item in arr {
+                        print(item["title"])
+                    }
+                }
+        }
     }
     
     @IBAction func getScienceNews(sender: AnyObject) {
         print("science.boom!")
+        Alamofire.request(.GET, "http://localhost:3000/section/science")
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    let arr = JSON as! NSArray
+                    for item in arr {
+                        print(item["title"])
+                    }
+                }
+        }
     }
     
     
     @IBAction func getCultureNews(sender: AnyObject) {
         print("culture thyself")
+        Alamofire.request(.GET, "http://localhost:3000/section/culture")
+            .responseJSON { response in
+                if let JSON = response.result.value {
+                    let arr = JSON as! NSArray
+                    for item in arr {
+                        print(item["title"])
+                    }
+                }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
+        DestViewController.article = "you are a turkey face"
     }
     
     
