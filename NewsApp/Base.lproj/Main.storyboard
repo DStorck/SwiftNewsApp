@@ -56,6 +56,7 @@
                                                 <state key="normal" title="USA"/>
                                                 <connections>
                                                     <action selector="getUSANews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7K-ET-enV"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" id="3Xo-6a-tC5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -118,6 +119,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="337"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ejH-rX-eYY">
+            <objects>
+                <viewController id="uTI-rj-Vy2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dra-NI-lHR"/>
+                        <viewControllerLayoutGuide type="bottom" id="nsl-sp-1r0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IvN-nr-BvB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMS-cS-Ung" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="337"/>
         </scene>
     </scenes>
 </document>

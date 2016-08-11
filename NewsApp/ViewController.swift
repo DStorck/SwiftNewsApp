@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class ViewController: UIViewController {
 
@@ -51,6 +53,7 @@ class ViewController: UIViewController {
             // Print out response string
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print("responseString = \(responseString)")
+            print("all done with response string")
 
             
             
@@ -79,6 +82,17 @@ class ViewController: UIViewController {
 
     @IBAction func getUSANews(sender: AnyObject) {
         print("usa news")
+        Alamofire.request(.GET, "http://localhost:3000/fish")
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                   // print("JSON: \(JSON)")
+                    let arr = JSON as! NSArray
+                    for item in arr {
+                        print(item["title"])
+                    }
+                }
+        }
     }
     
     @IBAction func getSeattleNews(sender: AnyObject) {
