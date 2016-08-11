@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E42943F89DF422D980C99564D1B92B61DF33C8AF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "85056C13D6CF158AB02BF9BEB4A07ACF76FBBDEC" : 0,
+    "E42943F89DF422D980C99564D1B92B61DF33C8AF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BA221F24-2C68-43BF-BD96-559374E8D450",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "85056C13D6CF158AB02BF9BEB4A07ACF76FBBDEC" : "",
+    "E42943F89DF422D980C99564D1B92B61DF33C8AF" : "NewsApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NewsApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NewsApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DStorck\/backend-news-API",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "85056C13D6CF158AB02BF9BEB4A07ACF76FBBDEC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:DStorck\/SwiftNewsApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E42943F89DF422D980C99564D1B92B61DF33C8AF"
+    }
+  ]
+}

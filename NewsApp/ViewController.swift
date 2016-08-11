@@ -59,11 +59,12 @@ class ViewController: UIViewController {
                 if let convertedJsonIntoDict = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
                     
                     // Print out dictionary
+                    print("dictionary???")
                     print(convertedJsonIntoDict)
                     
                     // Get value by key
-                    let firstNameValue = convertedJsonIntoDict["userName"] as? String
-                    print(firstNameValue!)
+                    //let firstNameValue = convertedJsonIntoDict[0]!["title"] as? String
+                    //print(firstNameValue!)
                     
                 }
             } catch let error as NSError {
