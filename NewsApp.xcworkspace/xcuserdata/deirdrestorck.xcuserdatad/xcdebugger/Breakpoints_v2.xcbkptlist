@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/ViewController.swift"
-            timestampString = "492645679.952499"
+            timestampString = "492713349.31769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "getSeattleNews(_:)"
             landmarkType = "5">
          </BreakpointContent>

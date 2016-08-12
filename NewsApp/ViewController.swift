@@ -9,8 +9,26 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Foundation
 
-class ViewController: UIViewController {
+protocol ShowArticlesDelegate: class {
+    func ShowOneTitle(sender: UIButton)
+}
+
+class ViewController: UIViewController{
+    
+    weak var delegate: ShowArticlesDelegate?
+    func ShowOneTitle(sender: UIButton) {
+        // invoking the delegate when the
+        // button is actually tapped
+        delegate?.ShowOneTitle(sender)
+    }
+    
+    
+    
+    func ShowOneTitle(controller: ArticlesViewController, text: String) {
+    controller.navigationController!.popViewControllerAnimated(true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,16 +122,9 @@ class ViewController: UIViewController {
     
     @IBAction func getPoliticalNews(sender: AnyObject) {
         print("hear how depressing politics are")
-        Alamofire.request(.GET, "http://localhost:3000/section/politics")
-            .responseJSON { response in
-                
-                if let JSON = response.result.value {
-                    let arr = JSON as! NSArray
-                    for item in arr {
-                        print(item["title"])
-                    }
-                }
-        }
+        //delegate!.ShowOneTitle("fuck")
+    
+    
     }
     
     @IBAction func getScienceNews(sender: AnyObject) {
@@ -148,9 +159,11 @@ class ViewController: UIViewController {
         print("this is printing right away isn't it?")
         print(articles)
         let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
-        DestViewController.article = String(self.articles.count)
+        //DestViewController.article = String(self.articles.count)
+
     }
     
+
     
 }
 

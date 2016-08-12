@@ -10,20 +10,28 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Foundation
 
 
-class ArticlesViewController: UIViewController {
+class ArticlesViewController: UIViewController, ShowArticlesDelegate {
 
     @IBOutlet var showArticles: UITextField!
+
     
     var article = String()
+    func ShowOneTitle(sender: UIButton) {
+        print("did we make this work yet?")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showArticles.text = article
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
