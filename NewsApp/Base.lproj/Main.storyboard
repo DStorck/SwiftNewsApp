@@ -37,7 +37,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.55000000000000004" height="1"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="WORLD">
+                                                <state key="normal" image="globe">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -50,10 +50,9 @@
                                                     <action selector="getWorldNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqX-vU-pMY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="USA"/>
+                                                <state key="normal" image="usa"/>
                                                 <connections>
                                                     <action selector="getUSANews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7K-ET-enV"/>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="test" id="GTL-K4-rHR"/>
@@ -65,18 +64,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="01a-E7-wT9">
                                         <rect key="frame" x="0.0" y="268" width="560" height="134"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk9-88-UoT">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk9-88-UoT">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="SEATTLE"/>
+                                                <state key="normal" image="seattle"/>
                                                 <connections>
                                                     <action selector="getSeattleNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RjU-FK-JX8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="POLITICS"/>
+                                                <state key="normal" image="politics"/>
                                                 <connections>
                                                     <action selector="getPoliticalNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2As-DI-iO7"/>
                                                 </connections>
@@ -86,18 +83,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-yO-CJ6">
                                         <rect key="frame" x="0.0" y="402" width="560" height="134"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="SCIENCE"/>
+                                                <state key="normal" image="science"/>
                                                 <connections>
                                                     <action selector="getScienceNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWx-ys-bZc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="CULTURE"/>
+                                                <state key="normal" image="culture"/>
                                                 <connections>
                                                     <action selector="getCultureNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDQ-hw-4Dq"/>
                                                 </connections>
@@ -137,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <rect key="frame" x="75" y="175" width="468" height="135"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -172,6 +167,14 @@
             <point key="canvasLocation" x="245" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="culture" width="80" height="80"/>
+        <image name="globe" width="100" height="100"/>
+        <image name="politics" width="80" height="80"/>
+        <image name="science" width="128" height="128"/>
+        <image name="seattle" width="100" height="100"/>
+        <image name="usa" width="80" height="80"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GTL-K4-rHR"/>
     </inferredMetricsTieBreakers>

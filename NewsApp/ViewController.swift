@@ -11,22 +11,22 @@ import Alamofire
 import SwiftyJSON
 import Foundation
 
-protocol ShowArticlesDelegate {
-    func ShowOneTitle(article: String)
+protocol ShowArticlesDelegate: class  {
+    func ShowOneTitle(title: String) -> String
 }
 
 class ViewController: UIViewController, ShowArticlesDelegate{
     
-    var delegate: ShowArticlesDelegate?
-    func ShowOneTitle(article: String) {
-        //just trying to figure out what is getting passed
-        delegate?.ShowOneTitle("taco")
-    }
+    weak var delegate: ShowArticlesDelegate?
+//    func ShowOneTitle(article: String) {
+//        //just trying to figure out what is getting passed
+//        delegate?.ShowOneTitle("taco")
+//    }
     
     
-    func ShowOneTitle(controller: ArticlesViewController, text: String) {
-    controller.navigationController!.popViewControllerAnimated(true)
-    }
+//    func ShowOneTitle(controller: ArticlesViewController, text: String) {
+//    controller.navigationController!.popViewControllerAnimated(true)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,6 +146,7 @@ class ViewController: UIViewController, ShowArticlesDelegate{
           let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
             //DestViewController.delegate = self
           DestViewController.article = testArray[0]//String(self.articles.count)
+            func ShowOneTitle(
         }
     }
     

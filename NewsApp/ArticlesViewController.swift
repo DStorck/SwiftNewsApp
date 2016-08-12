@@ -14,10 +14,9 @@ import Foundation
 
 
 class ArticlesViewController: UIViewController, ShowArticlesDelegate {
+   
 
-    @IBOutlet var showArticles: UILabel!
-
-    var article = String()
+    var article = ""
     func ShowOneTitle(article: String) {
         print("did we make this work yet?")
     }
@@ -25,14 +24,17 @@ class ArticlesViewController: UIViewController, ShowArticlesDelegate {
     @IBOutlet var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        showArticles.text = article
+        articleTitle.text = "let's pass things around"
     }
     
     
     @IBOutlet weak var articleTitle: UILabel!
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
 
 }
