@@ -15,38 +15,24 @@ import Foundation
 
 class ArticlesViewController: UIViewController, ShowArticlesDelegate {
 
-    @IBOutlet var showArticles: UITextField!
+    @IBOutlet var showArticles: UILabel!
 
-    
     var article = String()
-    func ShowOneTitle(sender: UIButton) {
+    func ShowOneTitle(article: String) {
         print("did we make this work yet?")
     }
     
+    @IBOutlet var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         showArticles.text = article
-        
-
-        // Do any additional setup after loading the view.
     }
     
     
+    @IBOutlet weak var articleTitle: UILabel!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

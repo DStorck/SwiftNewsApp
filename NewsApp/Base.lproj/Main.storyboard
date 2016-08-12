@@ -56,6 +56,7 @@
                                                 <state key="normal" title="USA"/>
                                                 <connections>
                                                     <action selector="getUSANews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7K-ET-enV"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="test" id="GTL-K4-rHR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -116,7 +117,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VHj-LD-HEr"/>
                     <connections>
-                        <segue destination="uTI-rj-Vy2" kind="show" identifier="showArticles" id="X25-0E-713"/>
+                        <segue destination="uTI-rj-Vy2" kind="show" identifier="getArticle" id="X25-0E-713"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,15 +128,25 @@
         <scene sceneID="ejH-rX-eYY">
             <objects>
                 <viewController title="articleViewController" id="uTI-rj-Vy2" customClass="ArticlesViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <textField key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="articles go here" textAlignment="center" minimumFontSize="17" id="bTR-XN-ga8">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ft-wM-M23"/>
+                        <viewControllerLayoutGuide type="bottom" id="wg8-Bb-RDN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e0A-qw-S5k">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <connections>
-                        <outlet property="showArticles" destination="bTR-XN-ga8" id="oWJ-hr-Dmo"/>
+                        <outlet property="articleTitle" destination="J0f-mg-xMG" id="Vu2-35-fMa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMS-cS-Ung" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,4 +172,7 @@
             <point key="canvasLocation" x="245" y="337"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GTL-K4-rHR"/>
+    </inferredMetricsTieBreakers>
 </document>

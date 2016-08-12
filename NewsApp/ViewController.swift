@@ -11,19 +11,17 @@ import Alamofire
 import SwiftyJSON
 import Foundation
 
-protocol ShowArticlesDelegate: class {
-    func ShowOneTitle(sender: UIButton)
+protocol ShowArticlesDelegate {
+    func ShowOneTitle(article: String)
 }
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, ShowArticlesDelegate{
     
-    weak var delegate: ShowArticlesDelegate?
-    func ShowOneTitle(sender: UIButton) {
-        // invoking the delegate when the
-        // button is actually tapped
-        delegate?.ShowOneTitle(sender)
+    var delegate: ShowArticlesDelegate?
+    func ShowOneTitle(article: String) {
+        //just trying to figure out what is getting passed
+        delegate?.ShowOneTitle("taco")
     }
-    
     
     
     func ShowOneTitle(controller: ArticlesViewController, text: String) {
@@ -57,7 +55,6 @@ class ViewController: UIViewController{
         print("let's get the world news!")
         Alamofire.request(.GET, "http://localhost:3000/section/world")
             .responseJSON { response in
-                
                 if let JSON = response.result.value {
                     let arr = JSON as! NSArray
                     for item in arr {
@@ -86,8 +83,6 @@ class ViewController: UIViewController{
             case .Failure(let error):
                 print(error)
             }
-            
-            
         }
     }
     var articles = [String]()
@@ -100,30 +95,18 @@ class ViewController: UIViewController{
                     let json = JSON(value)
                     for (_,subJson):(String, JSON) in json {
                         let tit = String(subJson["title"])
-                        //print(subJson["title"])
                         self.articles.append(tit)
-                        
                     }
                     print(self.articles)
-    
-                  
-                    //print(json[0]["title"].stringValue)
-                   
                 }
             case .Failure(let error):
                 print(error)
             }
-            
-            
         }
-       
-
     }
     
     @IBAction func getPoliticalNews(sender: AnyObject) {
         print("hear how depressing politics are")
-        //delegate!.ShowOneTitle("fuck")
-    
     
     }
     
@@ -155,12 +138,15 @@ class ViewController: UIViewController{
         }
     }
     
+   let testArray = ["test 1", "test 2", "test 3"]
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("this is printing right away isn't it?")
-        print(articles)
-        let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
-        //DestViewController.article = String(self.articles.count)
-
+        if (segue.identifier == "test") {
+          print("this is printing right away isn't it?")
+          print(articles)
+          let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
+            //DestViewController.delegate = self
+          DestViewController.article = testArray[0]//String(self.articles.count)
+        }
     }
     
 
