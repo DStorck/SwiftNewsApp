@@ -64,9 +64,9 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
 
     }
     
-    @IBAction func loadNextArticle(sender: AnyObject) {
-        print("OMG i swiped left!")
-    }
+//    @IBAction func loadNextArticle(sender: AnyObject) {
+//        print("OMG i swiped left!")
+//    }
     
     func ShowOneTitle(article: String) {
         print("did we make this work yet?")
@@ -81,11 +81,16 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateArticleArray(swipes)
-        //articleTitle.text = articles[0]
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.newArticleTitle(_:)))
         swipeRight.direction = .Right
         view.addGestureRecognizer(swipeRight)
         
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.showFullArticle(_:)))
+        swipeLeft.direction = .Left
+        view.addGestureRecognizer(swipeLeft)
+        
+        
+
     }
     
     func newArticleTitle(sender: UISwipeGestureRecognizer) {
@@ -93,6 +98,13 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
             print("please work please please swipe LEFT LEFT LEFT ")
             self.swipes += 1
             updateArticleArray(swipes)
+        }
+    }
+    
+    func showFullArticle(sender: UISwipeGestureRecognizer) {
+        if sender.direction == .Left {
+            print("please work please please swipe RIGHT RIGHT RIGHT ")
+            performSegueWithIdentifier("fullArticle", sender: nil)
         }
     }
     
@@ -107,6 +119,12 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
     
     @IBAction func tap(sender: AnyObject) {
         print("foo")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let DestViewController: FullArticleViewController = segue.destinationViewController as! FullArticleViewController
+        DestViewController.testing = "https://www.theguardian.com/world/2016/aug/05/last-supper-japan-killer-puffer-fish-fugu"
+        
     }
 
 }

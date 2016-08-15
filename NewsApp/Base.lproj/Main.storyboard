@@ -170,13 +170,32 @@
                         <action selector="tap:" destination="uTI-rj-Vy2" id="nb3-DD-g5u"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="Xub-Kq-3Cw">
+                <swipeGestureRecognizer direction="left" id="Xub-Kq-3Cw"/>
+                <swipeGestureRecognizer direction="right" id="hyH-a9-YSh" userLabel="Full Article Swipe Gesture Recognizer">
                     <connections>
-                        <action selector="loadNextArticle:" destination="uTI-rj-Vy2" id="rXb-QK-poX"/>
+                        <segue destination="kBt-yh-8c9" kind="show" identifier="fullArticle" id="bDf-ro-wlo"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1744" y="342"/>
+            <point key="canvasLocation" x="1749.5" y="336.5"/>
+        </scene>
+        <!--Full Article View Controller-->
+        <scene sceneID="GTZ-2n-2cD">
+            <objects>
+                <viewController id="kBt-yh-8c9" customClass="FullArticleViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" scalesPageToFit="YES" id="KbD-Ve-vPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    </webView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="KbD-Ve-vPZ" id="hLP-75-l3F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVg-gE-nph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2335" y="358"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nQS-Q7-B3m">
@@ -206,6 +225,6 @@
         <image name="usa" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="v8n-h6-8ag"/>
+        <segue reference="XRQ-wQ-Rcg"/>
     </inferredMetricsTieBreakers>
 </document>
