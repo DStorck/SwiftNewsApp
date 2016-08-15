@@ -44,7 +44,7 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
             requestURL = "section/culture"
         }
         
-        Alamofire.request(.GET, "http://localhost:3000/\(requestURL)").validate().responseJSON { response in
+        Alamofire.request(.GET, "https://backend-news-api.herokuapp.com/\(requestURL)").validate().responseJSON { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
@@ -71,11 +71,26 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
         print("did we make this work yet?")
     }
     
+    @IBOutlet weak var swipeLeftTest: UILabel!
+    
+    
     @IBOutlet var scrollView: UIScrollView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateArticleArray()
         //articleTitle.text = articles[0]
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.newArticleTitle(_:)))
+        swipeRight.direction = .Right
+        view.addGestureRecognizer(swipeRight)
+        
+    }
+    
+    func newArticleTitle(sender: UISwipeGestureRecognizer) {
+        if sender.direction == .Right {
+            print("please work please please swipe LEFT LEFT LEFT ")
+        }
     }
     
     
