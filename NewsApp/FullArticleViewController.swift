@@ -11,6 +11,7 @@ import UIKit
 class FullArticleViewController: UIViewController {
     
     var testing = String()
+    var for_realz = String()
     
     
     @IBOutlet var webView: UIWebView!
@@ -18,7 +19,7 @@ class FullArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: self.testing)
+        let url = NSURL(string: self.for_realz)
         let request = NSURLRequest(URL: url!)
         
         webView.loadRequest(request)

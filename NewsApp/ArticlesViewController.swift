@@ -21,13 +21,13 @@ enum NewsCategory: Int {
     case politics = 3
 }
 
-class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
+class ArticlesViewController: UIViewController {
 
     var articles = [String]()
+    var article_dict = [String: String]()
     var newsCategory: NewsCategory = .world
     var swipes = 0
     
-
     func updateArticleArray(article: Int) {
         var requestURL: String
         switch newsCategory {
@@ -52,9 +52,11 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
                     let json = JSON(value)
                     for (_,subJson):(String, JSON) in json {
                         let tit = String(subJson["title"])
+                        let guard_url = String(subJson["url"])
                         self.articles.append(tit)
+                        self.article_dict[tit] = guard_url
                     }
-                    print(self.articles)
+                    print(self.article_dict)
                     self.articleTitle.text = self.articles[article]
                 }
             case .Failure(let error):
@@ -124,6 +126,7 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let DestViewController: FullArticleViewController = segue.destinationViewController as! FullArticleViewController
         DestViewController.testing = "https://www.theguardian.com/world/2016/aug/05/last-supper-japan-killer-puffer-fish-fugu"
+        DestViewController.for_realz = article_dict[articles[swipes]]!
         
     }
 
