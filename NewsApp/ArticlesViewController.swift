@@ -125,8 +125,7 @@ class ArticlesViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let DestViewController: FullArticleViewController = segue.destinationViewController as! FullArticleViewController
-        DestViewController.testing = "https://www.theguardian.com/world/2016/aug/05/last-supper-japan-killer-puffer-fish-fugu"
-        DestViewController.for_realz = article_dict[articles[swipes]]!
+        DestViewController.article_url = article_dict[articles[swipes]]!
         
     }
 
