@@ -47,14 +47,13 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="getWorldNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqX-vU-pMY"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" id="v8n-h6-8ag"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
                                                 <state key="normal" image="usa"/>
                                                 <connections>
-                                                    <action selector="getUSANews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7K-ET-enV"/>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="test" id="GTL-K4-rHR"/>
                                                 </connections>
                                             </button>
@@ -64,18 +63,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="01a-E7-wT9">
                                         <rect key="frame" x="0.0" y="268" width="560" height="134"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk9-88-UoT">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk9-88-UoT">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
                                                 <state key="normal" image="seattle"/>
                                                 <connections>
-                                                    <action selector="getSeattleNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RjU-FK-JX8"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" id="tIf-8z-NNc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
                                                 <state key="normal" image="politics"/>
                                                 <connections>
-                                                    <action selector="getPoliticalNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2As-DI-iO7"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" id="cYk-wr-CKe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -83,36 +82,42 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-yO-CJ6">
                                         <rect key="frame" x="0.0" y="402" width="560" height="134"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
                                                 <state key="normal" image="science"/>
                                                 <connections>
-                                                    <action selector="getScienceNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWx-ys-bZc"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" id="IKH-B9-jjv"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
                                                 <state key="normal" image="culture"/>
                                                 <connections>
-                                                    <action selector="getCultureNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDQ-hw-4Dq"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" id="XRQ-wQ-Rcg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XUb-87-9Ua">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XUb-87-9Ua" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1VA-jj-yvv"/>
                             <constraint firstItem="2yX-mS-PkH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Odd-cz-LCS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2yX-mS-PkH" secondAttribute="bottom" id="POd-9L-8wA"/>
                             <constraint firstItem="2yX-mS-PkH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dGI-sQ-nEx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2yX-mS-PkH" secondAttribute="trailing" id="o8M-D2-FfG"/>
+                            <constraint firstItem="XUb-87-9Ua" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xsx-98-fZ8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VHj-LD-HEr"/>
                     <connections>
-                        <segue destination="uTI-rj-Vy2" kind="show" identifier="getArticle" id="X25-0E-713"/>
+                        <outlet property="downloadActivityIndicator" destination="XUb-87-9Ua" id="qlD-uq-Iov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -131,20 +136,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
-                                <rect key="frame" x="75" y="175" width="468" height="135"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
+                                <rect key="frame" x="20" y="175" width="560" height="250"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="IIQ-ka-V5U"/>
+                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J0f-mg-xMG" firstAttribute="leading" secondItem="e0A-qw-S5k" secondAttribute="leadingMargin" id="7B4-3y-UQk"/>
+                            <constraint firstItem="J0f-mg-xMG" firstAttribute="top" secondItem="1ft-wM-M23" secondAttribute="bottom" constant="111" id="7bC-WL-L8i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J0f-mg-xMG" secondAttribute="trailing" id="9yE-Nk-DAR"/>
+                            <constraint firstItem="wg8-Bb-RDN" firstAttribute="top" secondItem="J0f-mg-xMG" secondAttribute="bottom" constant="175" id="Bxj-cQ-Lir"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="iIe-gG-PIk"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="articleTitle" destination="J0f-mg-xMG" id="Vu2-35-fMa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMS-cS-Ung" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="woP-yt-01p">
+                    <connections>
+                        <action selector="tap:" destination="uTI-rj-Vy2" id="nb3-DD-g5u"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Xub-Kq-3Cw">
+                    <connections>
+                        <action selector="loadNextArticle:" destination="uTI-rj-Vy2" id="rXb-QK-poX"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1744" y="342"/>
         </scene>
@@ -176,6 +203,6 @@
         <image name="usa" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GTL-K4-rHR"/>
+        <segue reference="v8n-h6-8ag"/>
     </inferredMetricsTieBreakers>
 </document>
