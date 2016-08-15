@@ -25,9 +25,10 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
 
     var articles = [String]()
     var newsCategory: NewsCategory = .world
+    var swipes = 0
     
 
-    func updateArticleArray() {
+    func updateArticleArray(article: Int) {
         var requestURL: String
         switch newsCategory {
         case .world:
@@ -54,7 +55,7 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
                         self.articles.append(tit)
                     }
                     print(self.articles)
-                    self.articleTitle.text = self.articles[0]
+                    self.articleTitle.text = self.articles[article]
                 }
             case .Failure(let error):
                 print(error)
@@ -79,7 +80,7 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateArticleArray()
+        updateArticleArray(swipes)
         //articleTitle.text = articles[0]
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.newArticleTitle(_:)))
         swipeRight.direction = .Right
@@ -90,6 +91,8 @@ class ArticlesViewController: UIViewController /*, ShowArticlesDelegate*/ {
     func newArticleTitle(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Right {
             print("please work please please swipe LEFT LEFT LEFT ")
+            self.swipes += 1
+            updateArticleArray(swipes)
         }
     }
     
