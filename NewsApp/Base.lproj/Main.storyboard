@@ -176,6 +176,11 @@
                         <segue destination="kBt-yh-8c9" kind="show" identifier="fullArticle" id="bDf-ro-wlo"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="1XF-I7-JS4" userLabel="Swipe Up Gesture Recognizer">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="mbd-5U-spJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1749.5" y="336.5"/>
         </scene>
@@ -225,6 +230,7 @@
         <image name="usa" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="mbd-5U-spJ"/>
         <segue reference="XRQ-wQ-Rcg"/>
     </inferredMetricsTieBreakers>
 </document>

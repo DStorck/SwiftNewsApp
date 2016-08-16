@@ -66,9 +66,9 @@ class ArticlesViewController: UIViewController {
 
     }
     
-//    @IBAction func loadNextArticle(sender: AnyObject) {
-//        print("OMG i swiped left!")
-//    }
+    @IBAction func loadNextArticle(sender: AnyObject) {
+        print("OMG i swiped left!")
+    }
     
     func ShowOneTitle(article: String) {
         print("did we make this work yet?")
@@ -83,6 +83,7 @@ class ArticlesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateArticleArray(swipes)
+        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.newArticleTitle(_:)))
         swipeRight.direction = .Right
         view.addGestureRecognizer(swipeRight)
@@ -91,8 +92,9 @@ class ArticlesViewController: UIViewController {
         swipeLeft.direction = .Left
         view.addGestureRecognizer(swipeLeft)
         
-        
-
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.goHome(_:)))
+        swipeDown.direction = .Down
+        view.addGestureRecognizer(swipeDown)
     }
     
     func newArticleTitle(sender: UISwipeGestureRecognizer) {
@@ -110,6 +112,13 @@ class ArticlesViewController: UIViewController {
         }
     }
     
+    func goHome(sender: UISwipeGestureRecognizer) {
+        if sender.direction == .Down {
+            print("I love swiping down")
+            performSegueWithIdentifier("home", sender: nil)
+        }
+    }
+    
     
     @IBOutlet weak var articleTitle: UILabel!
     
@@ -118,15 +127,33 @@ class ArticlesViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-    @IBAction func tap(sender: AnyObject) {
-        print("foo")
-    }
+//    
+//    @IBAction func tap(sender: AnyObject) {
+//        print("foo")
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let DestViewController: FullArticleViewController = segue.destinationViewController as! FullArticleViewController
-        DestViewController.article_url = article_dict[articles[swipes]]!
-        
+        if let identifier = segue.identifier {
+            switch identifier {
+                case "fullArticle":
+                    let DestViewController = segue.destinationViewController as! FullArticleViewController
+                    DestViewController.article_url = article_dict[articles[swipes]]!
+                case "home":
+                    let DestViewContoller = segue.destinationViewController as! ViewController
+            default:
+                break
+            }
+            
+        }
+//        if segue.identifier == "fullArticle" {
+//        let DestViewController: FullArticleViewController = segue.destinationViewController as! FullArticleViewController
+//        DestViewController.article_url = article_dict[articles[swipes]]!
+//        }
+//        else if segue.identifier == "home" {
+//            let DestViewContoller: ViewController = segue.destinationViewController as! ViewController
+//        }
     }
+    
+    
 
 }
