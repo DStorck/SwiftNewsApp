@@ -5,6 +5,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.otf">
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,28 +27,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-mS-PkH">
-                                <rect key="frame" x="16" y="20" width="343" height="603"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-mS-PkH">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZe-lj-dsZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="162"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V34-w3-iJA">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="162"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-TJ-zEX">
-                                        <rect key="frame" x="0.0" y="151" width="343" height="151"/>
+                                        <rect key="frame" x="0.0" y="162" width="343" height="162"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-jt-HFC">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.55000000000000004" height="1"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" image="globe">
-                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
+                                                <state key="normal" title=""/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="10"/>
@@ -51,8 +58,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
-                                                <state key="normal" image="usa"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="60"/>
+                                                <state key="normal" title=""/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="test" id="GTL-K4-rHR"/>
                                                 </connections>
@@ -61,18 +69,19 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="01a-E7-wT9">
-                                        <rect key="frame" x="0.0" y="302" width="343" height="151"/>
+                                        <rect key="frame" x="0.0" y="324" width="343" height="162"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk9-88-UoT">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
                                                 <state key="normal" image="seattle"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" id="tIf-8z-NNc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
-                                                <state key="normal" image="politics"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
+                                                <state key="normal" title=""/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" id="cYk-wr-CKe"/>
                                                 </connections>
@@ -80,18 +89,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-yO-CJ6">
-                                        <rect key="frame" x="0.0" y="453" width="343" height="151"/>
+                                        <rect key="frame" x="0.0" y="486" width="343" height="162"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
-                                                <state key="normal" image="science"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
+                                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
+                                                <state key="normal" title=""/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" id="IKH-B9-jjv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
-                                                <state key="normal" image="culture"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
+                                                <state key="normal" title=""/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" id="XRQ-wQ-Rcg"/>
                                                 </connections>
@@ -137,7 +148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
                                 <rect key="frame" x="16" y="175" width="343" height="317"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -182,7 +193,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1749.5" y="336.5"/>
+            <point key="canvasLocation" x="1693.5" y="324.5"/>
         </scene>
         <!--Full Article View Controller-->
         <scene sceneID="GTZ-2n-2cD">
@@ -222,12 +233,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="culture" width="80" height="80"/>
-        <image name="globe" width="100" height="100"/>
-        <image name="politics" width="80" height="80"/>
-        <image name="science" width="128" height="128"/>
         <image name="seattle" width="100" height="100"/>
-        <image name="usa" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mbd-5U-spJ"/>

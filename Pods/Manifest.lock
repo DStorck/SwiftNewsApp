@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (3.4.1)
+  - FontAwesome.swift (0.8.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
+  - FontAwesome.swift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  FontAwesome.swift: f8c6cc5c42cbe93bdc04371363bc7b371fb3d3a1
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 900c546d9e104ad9252ac617a9c0e879f0a55a28
+PODFILE CHECKSUM: bab00672b1c0a26297f9332c8c139513fd679afa
 
 COCOAPODS: 1.0.1

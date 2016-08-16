@@ -10,7 +10,9 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import FontAwesome_swift
 import Foundation
+
 
 enum NewsCategory: Int {
     case world = 0
@@ -63,7 +65,10 @@ class ArticlesViewController: UIViewController {
                 print(error)
             }
         }
-
+    }
+    
+    func showCurrentTitle(ind: Int) {
+        self.articleTitle.text = self.articles[swipes]
     }
     
     @IBAction func loadNextArticle(sender: AnyObject) {
@@ -82,7 +87,11 @@ class ArticlesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if swipes  == 0 {
         updateArticleArray(swipes)
+        } else {
+           showCurrentTitle(swipes)
+        }
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.newArticleTitle(_:)))
         swipeRight.direction = .Right
@@ -99,22 +108,23 @@ class ArticlesViewController: UIViewController {
     
     func newArticleTitle(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Right {
-            print("please work please please swipe LEFT LEFT LEFT ")
+            print("swiped left")
             self.swipes += 1
-            updateArticleArray(swipes)
+            //updateArticleArray(swipes)
+            showCurrentTitle(swipes)
         }
     }
     
     func showFullArticle(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Left {
-            print("please work please please swipe RIGHT RIGHT RIGHT ")
+            print("swiped right")
             performSegueWithIdentifier("fullArticle", sender: nil)
         }
     }
     
     func goHome(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Down {
-            print("I love swiping down")
+            print("swiped down")
             performSegueWithIdentifier("home", sender: nil)
         }
     }
