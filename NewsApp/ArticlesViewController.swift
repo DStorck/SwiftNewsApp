@@ -30,7 +30,7 @@ class ArticlesViewController: UIViewController {
     var swipes = 0
     var page = 1
     
-    func updateArticleArray(article: Int) {
+    func updateArticleArray() {
         var requestURL: String
         switch newsCategory {
         case .world:
@@ -61,7 +61,6 @@ class ArticlesViewController: UIViewController {
                         self.article_dict[tit] = guard_url
                     }
                     print(self.articles)
-                    //self.articleTitle.text = self.articles[article]
                     self.articleTitle.text = self.articles[self.swipes]
                     self.page += 1
                 }
@@ -95,7 +94,7 @@ class ArticlesViewController: UIViewController {
 //            print("yay")
 //            print("swipes: \(swipes)")
 //            print("page \(page)")
-        updateArticleArray(swipes)
+        updateArticleArray()
             
         } else {
             print("swipes: \(swipes)")
@@ -123,7 +122,7 @@ class ArticlesViewController: UIViewController {
 //            showCurrentTitle(swipes)
             if swipes % 10 == 0 || swipes == 0 {
                 print("yay")
-                updateArticleArray(swipes)
+                updateArticleArray()
             } else {
                 print("swipes: \(swipes)")
                 
