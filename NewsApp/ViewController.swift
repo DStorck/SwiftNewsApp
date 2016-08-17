@@ -23,10 +23,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        assignBackground()
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.search(_:)))
+        swipeUp.direction = .Up
+        view.addGestureRecognizer(swipeUp)
+        
+        
+       // assignBackground()
     }
     
+    func search(sender: UISwipeGestureRecognizer) {
+        if sender.direction == .Up {
+            print("swiped up")
+            performSegueWithIdentifier("search", sender: nil)
+        }
+    }
     
+    /*
     func assignBackground(){
         let background = UIImage(named: "background")
         var imageView : UIImageView!
@@ -37,17 +50,30 @@ class ViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
-    }
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
 
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
+//        DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
+//    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
-        DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "search":
+                let DestViewController = segue.destinationViewController as! SearchViewController
+            default:
+                let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
+                DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
+            }
+        }
     }
+
     
 
     

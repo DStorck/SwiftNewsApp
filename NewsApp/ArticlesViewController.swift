@@ -20,6 +20,7 @@ enum NewsCategory: Int {
     case culture = 5
     case seattle = 2
     case politics = 3
+    case breaking = 6
 }
 
 class ArticlesViewController: UIViewController {
@@ -45,6 +46,9 @@ class ArticlesViewController: UIViewController {
             requestURL = "section/politics"
         case .culture:
             requestURL = "section/culture"
+        case .breaking:
+            requestURL = ""
+            
         }
         
         Alamofire.request(.GET, "https://backend-news-api.herokuapp.com/\(requestURL)/\(self.page)").validate().responseJSON { response in
@@ -91,14 +95,8 @@ class ArticlesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if swipes == 0 {
-//            print("yay")
-//            print("swipes: \(swipes)")
-//            print("page \(page)")
-        updateArticleArray()
-            
+            updateArticleArray()
         } else {
-            print("swipes: \(swipes)")
-            
            showCurrentTitle(swipes)
         }
         
@@ -113,6 +111,11 @@ class ArticlesViewController: UIViewController {
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.goHome(_:)))
         swipeDown.direction = .Down
         view.addGestureRecognizer(swipeDown)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.search(_:)))
+        swipeUp.direction = .Up
+        view.addGestureRecognizer(swipeUp)
+    
     }
     
     func newArticleTitle(sender: UISwipeGestureRecognizer) {
@@ -145,6 +148,13 @@ class ArticlesViewController: UIViewController {
         }
     }
     
+    func search(sender: UISwipeGestureRecognizer) {
+        if sender.direction == .Up {
+            print("swiped up")
+            performSegueWithIdentifier("search", sender: nil)
+        }
+    }
+    
     
     @IBOutlet weak var articleTitle: UILabel!
     
@@ -166,6 +176,8 @@ class ArticlesViewController: UIViewController {
                     DestViewController.article_url = article_dict[articles[swipes]]!
                 case "home":
                     let DestViewContoller = segue.destinationViewController as! ViewController
+                case "search":
+                    let DestViewController = segue.destinationViewController as! SearchViewController
             default:
                 break
             }

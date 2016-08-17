@@ -27,26 +27,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-mS-PkH">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-mS-PkH">
+                                <rect key="frame" x="16" y="20" width="343" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZe-lj-dsZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="162"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V34-w3-iJA">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="162"/>
-                                            </stackView>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2J-pM-6zE">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="40"/>
+                                                <state key="normal" title="CATCH UP!">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" id="ysi-Tn-u3q"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-TJ-zEX">
-                                        <rect key="frame" x="0.0" y="162" width="343" height="162"/>
+                                        <rect key="frame" x="0.0" y="151" width="343" height="151"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-jt-HFC">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.55000000000000004" height="1"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
-                                                <state key="normal" title=""/>
+                                                <state key="normal" image="globe2"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="10"/>
@@ -58,9 +65,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="60"/>
-                                                <state key="normal" title=""/>
+                                                <state key="normal" image="usa"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="test" id="GTL-K4-rHR"/>
                                                 </connections>
@@ -69,19 +76,19 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="01a-E7-wT9">
-                                        <rect key="frame" x="0.0" y="324" width="343" height="162"/>
+                                        <rect key="frame" x="0.0" y="302" width="343" height="151"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk9-88-UoT">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <state key="normal" image="seattle"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" id="tIf-8z-NNc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
-                                                <state key="normal" title=""/>
+                                                <state key="normal" image="capitol"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" id="cYk-wr-CKe"/>
                                                 </connections>
@@ -89,20 +96,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-yO-CJ6">
-                                        <rect key="frame" x="0.0" y="486" width="343" height="162"/>
+                                        <rect key="frame" x="0.0" y="453" width="343" height="151"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
-                                                <state key="normal" title=""/>
+                                                <state key="normal" image="flask"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" id="IKH-B9-jjv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
-                                                <state key="normal" title=""/>
+                                                <state key="normal" image="art"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" id="XRQ-wQ-Rcg"/>
                                                 </connections>
@@ -116,7 +123,7 @@
                                 <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XUb-87-9Ua" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1VA-jj-yvv"/>
                             <constraint firstItem="2yX-mS-PkH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Odd-cz-LCS"/>
@@ -133,6 +140,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="Aqu-Ss-8Pi" userLabel="Swipe to Search Gesture Recognizer" customClass="search">
+                    <connections>
+                        <segue destination="0Yy-Ys-P4z" kind="show" identifier="search" id="egK-Zb-Ki6"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1057" y="337"/>
         </scene>
@@ -148,7 +160,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
                                 <rect key="frame" x="16" y="175" width="343" height="317"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -192,6 +204,11 @@
                         <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="mbd-5U-spJ"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="oZV-Lq-DBv" userLabel="Swipe Down Gesture Recognizer">
+                    <connections>
+                        <segue destination="0Yy-Ys-P4z" kind="show" identifier="search" id="vUH-Ub-Suh"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1693.5" y="324.5"/>
         </scene>
@@ -231,12 +248,72 @@
             </objects>
             <point key="canvasLocation" x="245" y="337"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Shm-BH-nXl">
+            <objects>
+                <viewController id="0Yy-Ys-P4z" customClass="SearchViewController" customModule="NewsApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GiK-Kx-7Ya"/>
+                        <viewControllerLayoutGuide type="bottom" id="74P-It-OWe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XJd-Lc-aay">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="L7e-cl-K1x">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <color key="barTintColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search for news here:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD4-yC-RdQ">
+                                <rect key="frame" x="65" y="77" width="237" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L7e-cl-K1x" firstAttribute="top" secondItem="GiK-Kx-7Ya" secondAttribute="bottom" constant="140" id="EWl-fI-5lZ"/>
+                            <constraint firstItem="L7e-cl-K1x" firstAttribute="leading" secondItem="XJd-Lc-aay" secondAttribute="leading" id="LJR-v4-Gcj"/>
+                            <constraint firstAttribute="trailing" secondItem="L7e-cl-K1x" secondAttribute="trailing" id="uNn-d6-RiV"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uop-hD-R60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707" y="1203"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="O8P-3y-9P8">
+            <objects>
+                <viewController id="7SJ-W8-gYA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dc0-c9-oCu"/>
+                        <viewControllerLayoutGuide type="bottom" id="dnm-en-yGG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f8Q-A8-0RY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qH7-uh-i4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
+        <image name="art" width="128" height="128"/>
+        <image name="capitol" width="128" height="128"/>
+        <image name="flask" width="128" height="128"/>
+        <image name="globe2" width="128" height="128"/>
         <image name="seattle" width="100" height="100"/>
+        <image name="usa" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="egK-Zb-Ki6"/>
         <segue reference="mbd-5U-spJ"/>
-        <segue reference="XRQ-wQ-Rcg"/>
+        <segue reference="IKH-B9-jjv"/>
     </inferredMetricsTieBreakers>
 </document>
