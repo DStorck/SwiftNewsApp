@@ -11,31 +11,33 @@ import UIKit
 class SearchViewController: UIViewController {
     
     
-    func search() {
-        print("did we make it to the search controller?")
+    @IBOutlet weak var searchInput: UITextField!
+    
+    @IBAction func doSearch(sender: AnyObject) {
+        var input = String(searchInput.text)
+        print("we are in the DoSearch method")
+        print("input please:\(input)")
     }
+    
+    func search() {
+        print("we are in the search method")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         search()
-        
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
+            DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
+            DestViewController.searchTerm = searchInput.text!
+        
     }
-    */
 
 }

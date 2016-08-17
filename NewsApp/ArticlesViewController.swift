@@ -21,10 +21,13 @@ enum NewsCategory: Int {
     case seattle = 2
     case politics = 3
     case breaking = 6
+    case search = 7
 }
 
 class ArticlesViewController: UIViewController {
 
+    
+    var searchTerm = String()
     var articles = [String]()
     var article_dict = [String: String]()
     var newsCategory: NewsCategory = .world
@@ -48,12 +51,14 @@ class ArticlesViewController: UIViewController {
             requestURL = "section/culture"
         case .breaking:
             requestURL = ""
-            
+        case .search:
+            requestURL = searchTerm
         }
         
         Alamofire.request(.GET, "https://backend-news-api.herokuapp.com/\(requestURL)/\(self.page)").validate().responseJSON { response in
             switch response.result {
             case .Success:
+                print(requestURL)
                 self.articles = []
                 self.swipes = 0
                 if let value = response.result.value {

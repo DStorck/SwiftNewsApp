@@ -12,7 +12,6 @@ class FullArticleViewController: UIViewController {
     
     var article_url = String()
     
-    
     @IBOutlet var webView: UIWebView!
 
     override func viewDidLoad() {
