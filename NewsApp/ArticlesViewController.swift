@@ -58,7 +58,6 @@ class ArticlesViewController: UIViewController {
         Alamofire.request(.GET, "https://backend-news-api.herokuapp.com/\(requestURL)/\(self.page)").validate().responseJSON { response in
             switch response.result {
             case .Success:
-                print(requestURL)
                 self.articles = []
                 self.swipes = 0
                 if let value = response.result.value {
@@ -70,8 +69,14 @@ class ArticlesViewController: UIViewController {
                         self.article_dict[tit] = guard_url
                     }
                     print(self.articles)
+                    
+                    if self.articles.count == 0 {
+                        self.articleTitle.text = "Sorry, no articles matched that search term"
+                    } else {
                     self.articleTitle.text = self.articles[self.swipes]
                     self.page += 1
+                    }
+        
                 }
             case .Failure(let error):
                 print(error)
@@ -101,6 +106,9 @@ class ArticlesViewController: UIViewController {
         super.viewDidLoad()
         if swipes == 0 {
             updateArticleArray()
+        } else if articles.count == 0 {
+            searchTerm = ""
+            updateArticleArray()
         } else {
            showCurrentTitle(swipes)
         }
@@ -126,14 +134,12 @@ class ArticlesViewController: UIViewController {
     func newArticleTitle(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Right {
             print("swiped left")
-           self.swipes += 1
-//            showCurrentTitle(swipes)
-            if swipes % 10 == 0 || swipes == 0 {
-                print("yay")
+            self.swipes += 1
+            
+            if swipes % 10 == 0 || swipes == 0 || articles.count == 0 {
+                searchTerm = "fart"
                 updateArticleArray()
             } else {
-                print("swipes: \(swipes)")
-                
                 showCurrentTitle(swipes)
             }
         }
