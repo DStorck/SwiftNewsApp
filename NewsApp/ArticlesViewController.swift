@@ -6,7 +6,6 @@
 //  Copyright © 2016 Deirdre Storck. All rights reserved.
 //
 
-
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -29,6 +28,7 @@ class ArticlesViewController: UIViewController {
     var article_dict = [String: String]()
     var newsCategory: NewsCategory = .world
     var swipes = 0
+    var page = 1
     
     func updateArticleArray(article: Int) {
         var requestURL: String
@@ -47,9 +47,11 @@ class ArticlesViewController: UIViewController {
             requestURL = "section/culture"
         }
         
-        Alamofire.request(.GET, "https://backend-news-api.herokuapp.com/\(requestURL)").validate().responseJSON { response in
+        Alamofire.request(.GET, "https://backend-news-api.herokuapp.com/\(requestURL)/\(self.page)").validate().responseJSON { response in
             switch response.result {
             case .Success:
+                self.articles = []
+                self.swipes = 0
                 if let value = response.result.value {
                     let json = JSON(value)
                     for (_,subJson):(String, JSON) in json {
@@ -58,8 +60,10 @@ class ArticlesViewController: UIViewController {
                         self.articles.append(tit)
                         self.article_dict[tit] = guard_url
                     }
-                    print(self.article_dict)
-                    self.articleTitle.text = self.articles[article]
+                    print(self.articles)
+                    //self.articleTitle.text = self.articles[article]
+                    self.articleTitle.text = self.articles[self.swipes]
+                    self.page += 1
                 }
             case .Failure(let error):
                 print(error)
@@ -87,9 +91,15 @@ class ArticlesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if swipes  == 0 {
+        if swipes == 0 {
+//            print("yay")
+//            print("swipes: \(swipes)")
+//            print("page \(page)")
         updateArticleArray(swipes)
+            
         } else {
+            print("swipes: \(swipes)")
+            
            showCurrentTitle(swipes)
         }
         
@@ -109,9 +119,16 @@ class ArticlesViewController: UIViewController {
     func newArticleTitle(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Right {
             print("swiped left")
-            self.swipes += 1
-            //updateArticleArray(swipes)
-            showCurrentTitle(swipes)
+           self.swipes += 1
+//            showCurrentTitle(swipes)
+            if swipes % 10 == 0 || swipes == 0 {
+                print("yay")
+                updateArticleArray(swipes)
+            } else {
+                print("swipes: \(swipes)")
+                
+                showCurrentTitle(swipes)
+            }
         }
     }
     
