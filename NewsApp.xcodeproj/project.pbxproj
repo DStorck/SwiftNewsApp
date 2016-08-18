@@ -11,7 +11,9 @@
 		6C4BE5FE1A7AB6EF9C8F8E9C /* Pods_NewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00804D91D358A0D9FDE18EEF /* Pods_NewsAppTests.framework */; };
 		9F6C96101D63B42F0022EF4A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6C960E1D63B42F0022EF4A /* FontAwesome.otf */; };
 		9F6C96121D64E2FF0022EF4A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C96111D64E2FF0022EF4A /* SearchViewController.swift */; };
-		9F6C96141D662F090022EF4A /* SavedArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C96131D662F090022EF4A /* SavedArticlesViewController.swift */; };
+		9F6C96141D662F090022EF4A /* SavedArticlesViewController-fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C96131D662F090022EF4A /* SavedArticlesViewController-fake.swift */; };
+		9F6C96161D6658D70022EF4A /* SavedArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C96151D6658D70022EF4A /* SavedArticlesTableViewCell.swift */; };
+		9F6C961A1D665C100022EF4A /* SavedArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C96191D665C100022EF4A /* SavedArticlesTableViewController.swift */; };
 		9FD0E51D1D625D8E0078BD3F /* FullArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0E51C1D625D8E0078BD3F /* FullArticleViewController.swift */; };
 		9FDB8EE61D5A741800BA772B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB8EE51D5A741800BA772B /* AppDelegate.swift */; };
 		9FDB8EE81D5A741800BA772B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB8EE71D5A741800BA772B /* ViewController.swift */; };
@@ -48,7 +50,9 @@
 		7D7C03DA8657B37F96D00D38 /* Pods-NewsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppUITests/Pods-NewsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F6C960F1D63B42F0022EF4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = Pods/FontAwesome.swift/FontAwesome/en.lproj/FontAwesome.otf; sourceTree = "<group>"; };
 		9F6C96111D64E2FF0022EF4A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		9F6C96131D662F090022EF4A /* SavedArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedArticlesViewController.swift; sourceTree = "<group>"; };
+		9F6C96131D662F090022EF4A /* SavedArticlesViewController-fake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedArticlesViewController-fake.swift"; sourceTree = "<group>"; };
+		9F6C96151D6658D70022EF4A /* SavedArticlesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedArticlesTableViewCell.swift; sourceTree = "<group>"; };
+		9F6C96191D665C100022EF4A /* SavedArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedArticlesTableViewController.swift; sourceTree = "<group>"; };
 		9FD0E51C1D625D8E0078BD3F /* FullArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
 		9FDB8EE21D5A741800BA772B /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDB8EE51D5A741800BA772B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,10 +145,12 @@
 				9FDB8EE51D5A741800BA772B /* AppDelegate.swift */,
 				9FDB8EE71D5A741800BA772B /* ViewController.swift */,
 				9FF088AA1D5CE92600BC7ED2 /* ArticlesViewController.swift */,
-				9F6C96131D662F090022EF4A /* SavedArticlesViewController.swift */,
+				9F6C96131D662F090022EF4A /* SavedArticlesViewController-fake.swift */,
 				9F6C96111D64E2FF0022EF4A /* SearchViewController.swift */,
+				9F6C96191D665C100022EF4A /* SavedArticlesTableViewController.swift */,
 				9FD0E51C1D625D8E0078BD3F /* FullArticleViewController.swift */,
 				9FDB8EE91D5A741800BA772B /* Main.storyboard */,
+				9F6C96151D6658D70022EF4A /* SavedArticlesTableViewCell.swift */,
 				9FDB8EEC1D5A741800BA772B /* Assets.xcassets */,
 				9FDB8EEE1D5A741800BA772B /* LaunchScreen.storyboard */,
 				9FDB8EF11D5A741800BA772B /* Info.plist */,
@@ -446,10 +452,12 @@
 			files = (
 				9F6C96121D64E2FF0022EF4A /* SearchViewController.swift in Sources */,
 				9FD0E51D1D625D8E0078BD3F /* FullArticleViewController.swift in Sources */,
+				9F6C961A1D665C100022EF4A /* SavedArticlesTableViewController.swift in Sources */,
 				9FF088AB1D5CE92600BC7ED2 /* ArticlesViewController.swift in Sources */,
 				9FDB8EE81D5A741800BA772B /* ViewController.swift in Sources */,
+				9F6C96161D6658D70022EF4A /* SavedArticlesTableViewCell.swift in Sources */,
 				9FDB8EE61D5A741800BA772B /* AppDelegate.swift in Sources */,
-				9F6C96141D662F090022EF4A /* SavedArticlesViewController.swift in Sources */,
+				9F6C96141D662F090022EF4A /* SavedArticlesViewController-fake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ import UIKit
 
 class SavedArticlesViewController: UITableViewController {
     
+    
+    
     var article_url = String()
     var article_title = String()
 

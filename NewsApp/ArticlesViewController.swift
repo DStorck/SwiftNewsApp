@@ -187,7 +187,7 @@ class ArticlesViewController: UIViewController {
         if let identifier = segue.identifier {
             switch identifier {
                 case "addArticle":
-                    let DestViewController = segue.destinationViewController as! SavedArticlesViewController
+                    let DestViewController = segue.destinationViewController as! SavedArticlesTableViewController
                     DestViewController.article_url = article_dict[articles[swipes]]!
                     DestViewController.article_title = articles[swipes]
                 case "fullArticle":
