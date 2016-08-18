@@ -7,18 +7,36 @@
 //
 
 import UIKit
+import RealmSwift
 
 
 class SavedArticlesTableViewController: UITableViewController {
     
-    
+    let realm = try! Realm()
     var article_url = String()
     var article_title = String()
     var article_array = [String]()
     var savedArticles = [String: String]()
+    var all_articles: Results<Article>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        all_articles = realm.objects(Article)
+        //save instance of article to realm article dohickey
+        let article = Article()
+        article.title = article_title
+        article.url = article_url
+        
+        try! realm.write {
+            realm.add(article)
+        }
+        
+        print("all articles \(all_articles)")
+        
+        
+        
+        
         savedArticles[article_title] = article_title
         article_array.append(article_title)
         //print(article_array)
@@ -55,6 +73,7 @@ class SavedArticlesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("SavedArticlesTableViewCell", forIndexPath: indexPath) as! SavedArticlesTableViewCell
         
         cell.title.text = article_array[indexPath.row]
+        //cell.title.text =
         
         
         
