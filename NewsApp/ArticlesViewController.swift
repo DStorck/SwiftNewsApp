@@ -34,6 +34,10 @@ class ArticlesViewController: UIViewController {
     var swipes = 0
     var page = 1
     
+    
+    @IBAction func save(sender: AnyObject) {
+    }
+    
     func updateArticleArray() {
         var requestURL: String
         switch newsCategory {
@@ -182,6 +186,10 @@ class ArticlesViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
             switch identifier {
+                case "addArticle":
+                    let DestViewController = segue.destinationViewController as! SavedArticlesViewController
+                    DestViewController.article_url = article_dict[articles[swipes]]!
+                    DestViewController.article_title = articles[swipes]
                 case "fullArticle":
                     let DestViewController = segue.destinationViewController as! FullArticleViewController
                     DestViewController.article_url = article_dict[articles[swipes]]!
