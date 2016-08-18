@@ -140,11 +140,8 @@ class ArticlesViewController: UIViewController {
         if sender.direction == .Right {
             print("swiped left")
             self.swipes += 1
-            
             if swipes % 10 == 0 || swipes == 0 || articles.count == 0 {
                 performSegueWithIdentifier("home", sender: nil)
-//                searchTerm = "fart"
-//                updateArticleArray()
             } else {
                 showCurrentTitle(swipes)
             }
@@ -152,9 +149,11 @@ class ArticlesViewController: UIViewController {
     }
     
     func showFullArticle(sender: UISwipeGestureRecognizer) {
-        if sender.direction == .Left {
+        if sender.direction == .Left && articles.count != 0 {
             print("swiped right")
             performSegueWithIdentifier("fullArticle", sender: nil)
+        } else {
+            performSegueWithIdentifier("home", sender: nil)
         }
     }
     
