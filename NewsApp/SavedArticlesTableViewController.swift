@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SavedArticlesTableViewController: UITableViewController {
     
     
@@ -20,7 +21,7 @@ class SavedArticlesTableViewController: UITableViewController {
         super.viewDidLoad()
         savedArticles[article_title] = article_title
         article_array.append(article_title)
-        print(article_array)
+        //print(article_array)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -62,6 +63,14 @@ class SavedArticlesTableViewController: UITableViewController {
         
 
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("url \(article_url)")
+        print(article_array)
+        print(savedArticles)
+        let DestViewController = segue.destinationViewController as! FullArticleViewController
+        DestViewController.article_url = article_url
     }
     
 

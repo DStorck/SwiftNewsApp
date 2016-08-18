@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		3B08E78336C06FC6653A5A4D /* Pods_NewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC72AC60296A922A8523E9CA /* Pods_NewsAppUITests.framework */; };
 		6C4BE5FE1A7AB6EF9C8F8E9C /* Pods_NewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00804D91D358A0D9FDE18EEF /* Pods_NewsAppTests.framework */; };
-		9F6C96101D63B42F0022EF4A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6C960E1D63B42F0022EF4A /* FontAwesome.otf */; };
 		9F6C96121D64E2FF0022EF4A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C96111D64E2FF0022EF4A /* SearchViewController.swift */; };
 		9F6C96161D6658D70022EF4A /* SavedArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C96151D6658D70022EF4A /* SavedArticlesTableViewCell.swift */; };
 		9F6C961A1D665C100022EF4A /* SavedArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C96191D665C100022EF4A /* SavedArticlesTableViewController.swift */; };
+		9F6C961D1D6679860022EF4A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6C961B1D6679860022EF4A /* Realm.framework */; };
+		9F6C961E1D6679860022EF4A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6C961C1D6679860022EF4A /* RealmSwift.framework */; };
 		9FD0E51D1D625D8E0078BD3F /* FullArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0E51C1D625D8E0078BD3F /* FullArticleViewController.swift */; };
 		9FDB8EE61D5A741800BA772B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB8EE51D5A741800BA772B /* AppDelegate.swift */; };
 		9FDB8EE81D5A741800BA772B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB8EE71D5A741800BA772B /* ViewController.swift */; };
@@ -47,10 +48,12 @@
 		02E79D833FF9B7467BF32273 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		718BDC8DECB60E5C6115F521 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7D7C03DA8657B37F96D00D38 /* Pods-NewsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppUITests/Pods-NewsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9F6C960F1D63B42F0022EF4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = Pods/FontAwesome.swift/FontAwesome/en.lproj/FontAwesome.otf; sourceTree = "<group>"; };
 		9F6C96111D64E2FF0022EF4A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9F6C96151D6658D70022EF4A /* SavedArticlesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedArticlesTableViewCell.swift; sourceTree = "<group>"; };
 		9F6C96191D665C100022EF4A /* SavedArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedArticlesTableViewController.swift; sourceTree = "<group>"; };
+		9F6C961B1D6679860022EF4A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
+		9F6C961C1D6679860022EF4A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		9F6C961F1D6679E60022EF4A /* FontAwesome_swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome_swift.framework; path = "../../Library/Developer/Xcode/DerivedData/NewsApp-ckmcreeyawgiytbkfekmdgxrhtsx/Build/Products/Debug-iphoneos/FontAwesome.swift/FontAwesome_swift.framework"; sourceTree = "<group>"; };
 		9FD0E51C1D625D8E0078BD3F /* FullArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
 		9FDB8EE21D5A741800BA772B /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDB8EE51D5A741800BA772B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6C961D1D6679860022EF4A /* Realm.framework in Frameworks */,
+				9F6C961E1D6679860022EF4A /* RealmSwift.framework in Frameworks */,
 				F54D7260FBC1076F1464BC76 /* Pods_NewsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,7 +122,6 @@
 		9FDB8ED91D5A741800BA772B = {
 			isa = PBXGroup;
 			children = (
-				9F6C960E1D63B42F0022EF4A /* FontAwesome.otf */,
 				9FDB8EE41D5A741800BA772B /* NewsApp */,
 				9FDB8EF91D5A741800BA772B /* NewsAppTests */,
 				9FDB8F041D5A741800BA772B /* NewsAppUITests */,
@@ -176,6 +180,9 @@
 		BA54CDA3F185439EAF20DCE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F6C961F1D6679E60022EF4A /* FontAwesome_swift.framework */,
+				9F6C961B1D6679860022EF4A /* Realm.framework */,
+				9F6C961C1D6679860022EF4A /* RealmSwift.framework */,
 				D79FC1E0548A3B6FF72F0A93 /* Pods_NewsApp.framework */,
 				00804D91D358A0D9FDE18EEF /* Pods_NewsAppTests.framework */,
 				EC72AC60296A922A8523E9CA /* Pods_NewsAppUITests.framework */,
@@ -296,7 +303,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F6C96101D63B42F0022EF4A /* FontAwesome.otf in Resources */,
 				9FDB8EF01D5A741800BA772B /* LaunchScreen.storyboard in Resources */,
 				9FDB8EED1D5A741800BA772B /* Assets.xcassets in Resources */,
 				9FDB8EEB1D5A741800BA772B /* Main.storyboard in Resources */,
@@ -489,14 +495,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9F6C960E1D63B42F0022EF4A /* FontAwesome.otf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F6C960F1D63B42F0022EF4A /* en */,
-			);
-			name = FontAwesome.otf;
-			sourceTree = "<group>";
-		};
 		9FDB8EE91D5A741800BA772B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -606,7 +604,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+				);
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ada.NewsApp;
@@ -622,7 +624,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+				);
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ada.NewsApp;

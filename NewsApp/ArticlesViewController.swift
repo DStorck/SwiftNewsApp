@@ -9,8 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import FontAwesome_swift
 import Foundation
+import RealmSwift
 
 
 enum NewsCategory: Int {

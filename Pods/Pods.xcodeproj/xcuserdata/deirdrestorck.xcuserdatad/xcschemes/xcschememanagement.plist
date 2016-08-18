@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FontAwesome.swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-NewsApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -30,6 +20,16 @@
 			<false/>
 		</dict>
 		<key>Pods-NewsAppUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1FE2578FF0805299395CF2A0206BB671</key>
+		<key>41D5ED35CE166B7896F2B2D91C624633</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5EBC027D5E75E88C2847857579E34C19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69725B711E6ED8191CACC768384EACA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,22 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87222EA71BA1FDA90436CE0900A2C800</key>
+		<key>9B59E20268C3BD5BC85F5491EEC2725E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9E6B5AB42CA9E9F2A9490FC29650178A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BE5F0595A8D932769530AB6A9D9A8BE4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EF4F067C2D0E135B80299B089E168BDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
