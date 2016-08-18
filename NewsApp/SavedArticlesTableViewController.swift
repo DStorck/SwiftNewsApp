@@ -13,13 +13,14 @@ class SavedArticlesTableViewController: UITableViewController {
     
     var article_url = String()
     var article_title = String()
-    
-
-    
-    var savedArticles =  ["one"]
+    var article_array = [String]()
+    var savedArticles = [String: String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        savedArticles[article_title] = article_title
+        article_array.append(article_title)
+        print(article_array)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,11 +49,11 @@ class SavedArticlesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let article = savedArticles[indexPath.row]
+        let article = article_array[indexPath.row]
 
         let cell = tableView.dequeueReusableCellWithIdentifier("SavedArticlesTableViewCell", forIndexPath: indexPath) as! SavedArticlesTableViewCell
         
-        cell.title.text = " ha ha ha ha ha"
+        cell.title.text = article_array[indexPath.row]
         
         
         
