@@ -109,11 +109,6 @@ class ArticlesViewController: UIViewController {
         if swipes == 0 {
             print("count: \(articles.count)")
             updateArticleArray()
-        } else if articles.count == 0 {
-            print("in the else if ")
-            performSegueWithIdentifier("home", sender: nil)
-           // searchTerm = ""
-           // updateArticleArray()
         } else {
            showCurrentTitle(swipes)
         }
@@ -140,8 +135,10 @@ class ArticlesViewController: UIViewController {
         if sender.direction == .Right {
             print("swiped left")
             self.swipes += 1
-            if swipes % 10 == 0 || swipes == 0 || articles.count == 0 {
-                performSegueWithIdentifier("home", sender: nil)
+            if articles.count == 0 {
+               performSegueWithIdentifier("home", sender: nil)
+            } else if swipes % 10 == 0 || swipes == 0 {
+                updateArticleArray()
             } else {
                 showCurrentTitle(swipes)
             }
