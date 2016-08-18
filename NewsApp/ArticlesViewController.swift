@@ -33,6 +33,7 @@ class ArticlesViewController: UIViewController {
     var newsCategory: NewsCategory = .world
     var swipes = 0
     var page = 1
+    let random_search_terms = ["dog", "cat", "puppy", "robot", "space", "ocean", "bees"]
     
     func updateArticleArray() {
         var requestURL: String
@@ -68,6 +69,7 @@ class ArticlesViewController: UIViewController {
                         self.articles.append(tit)
                         self.article_dict[tit] = guard_url
                     }
+                    print(requestURL)
                     print(self.articles)
                     
                     if self.articles.count == 0 {
@@ -105,10 +107,13 @@ class ArticlesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if swipes == 0 {
+            print("count: \(articles.count)")
             updateArticleArray()
         } else if articles.count == 0 {
-            searchTerm = ""
-            updateArticleArray()
+            print("in the else if ")
+            performSegueWithIdentifier("home", sender: nil)
+           // searchTerm = ""
+           // updateArticleArray()
         } else {
            showCurrentTitle(swipes)
         }
@@ -137,8 +142,9 @@ class ArticlesViewController: UIViewController {
             self.swipes += 1
             
             if swipes % 10 == 0 || swipes == 0 || articles.count == 0 {
-                searchTerm = "fart"
-                updateArticleArray()
+                performSegueWithIdentifier("home", sender: nil)
+//                searchTerm = "fart"
+//                updateArticleArray()
             } else {
                 showCurrentTitle(swipes)
             }
