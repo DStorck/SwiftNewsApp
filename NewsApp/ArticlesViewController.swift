@@ -33,7 +33,6 @@ class ArticlesViewController: UIViewController {
     var newsCategory: NewsCategory = .world
     var swipes = 0
     var page = 1
-    let random_search_terms = ["dog", "cat", "puppy", "robot", "space", "ocean", "bees"]
     
     func updateArticleArray() {
         var requestURL: String
@@ -78,7 +77,6 @@ class ArticlesViewController: UIViewController {
                     self.articleTitle.text = self.articles[self.swipes]
                     self.page += 1
                     }
-        
                 }
             case .Failure(let error):
                 print(error)
@@ -91,7 +89,7 @@ class ArticlesViewController: UIViewController {
     }
     
     @IBAction func loadNextArticle(sender: AnyObject) {
-        print("OMG i swiped left!")
+        print("loadnextArticle method")
     }
     
     func ShowOneTitle(article: String) {
@@ -101,7 +99,7 @@ class ArticlesViewController: UIViewController {
     @IBOutlet weak var swipeLeftTest: UILabel!
     
     
-    @IBOutlet var scrollView: UIScrollView!
+    //@IBOutlet var scrollView: UIScrollView!
     
     
     override func viewDidLoad() {
@@ -196,13 +194,7 @@ class ArticlesViewController: UIViewController {
             }
             
         }
-//        if segue.identifier == "fullArticle" {
-//        let DestViewController: FullArticleViewController = segue.destinationViewController as! FullArticleViewController
-//        DestViewController.article_url = article_dict[articles[swipes]]!
-//        }
-//        else if segue.identifier == "home" {
-//            let DestViewContoller: ViewController = segue.destinationViewController as! ViewController
-//        }
+
     }
     
     

@@ -40,7 +40,7 @@
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="uTI-rj-Vy2" kind="show" id="ysi-Tn-u3q"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="catchUp" id="ysi-Tn-u3q"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -61,7 +61,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="uTI-rj-Vy2" kind="show" id="v8n-h6-8ag"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="world" id="v8n-h6-8ag"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
@@ -69,7 +69,7 @@
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="60"/>
                                                 <state key="normal" image="usa"/>
                                                 <connections>
-                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="test" id="GTL-K4-rHR"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="usa" id="GTL-K4-rHR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -82,7 +82,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
                                                 <state key="normal" image="seattle"/>
                                                 <connections>
-                                                    <segue destination="uTI-rj-Vy2" kind="show" id="tIf-8z-NNc"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="seattle" id="tIf-8z-NNc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
@@ -90,7 +90,7 @@
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
                                                 <state key="normal" image="capitol"/>
                                                 <connections>
-                                                    <segue destination="uTI-rj-Vy2" kind="show" id="cYk-wr-CKe"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="pol" id="cYk-wr-CKe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -103,7 +103,7 @@
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
                                                 <state key="normal" image="flask"/>
                                                 <connections>
-                                                    <segue destination="uTI-rj-Vy2" kind="show" id="IKH-B9-jjv"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="science" id="IKH-B9-jjv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
@@ -111,7 +111,7 @@
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
                                                 <state key="normal" image="art"/>
                                                 <connections>
-                                                    <segue destination="uTI-rj-Vy2" kind="show" id="XRQ-wQ-Rcg"/>
+                                                    <segue destination="uTI-rj-Vy2" kind="show" identifier="art" id="XRQ-wQ-Rcg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -136,6 +136,7 @@
                     <navigationItem key="navigationItem" id="VHj-LD-HEr"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="catchUpButton" destination="R2J-pM-6zE" id="zRd-9g-hMQ"/>
                         <outlet property="downloadActivityIndicator" destination="XUb-87-9Ua" id="qlD-uq-Iov"/>
                     </connections>
                 </viewController>
@@ -335,8 +336,8 @@
         <image name="usa" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vUH-Ub-Suh"/>
-        <segue reference="cxK-YX-rEj"/>
+        <segue reference="egK-Zb-Ki6"/>
         <segue reference="mbd-5U-spJ"/>
+        <segue reference="XRQ-wQ-Rcg"/>
     </inferredMetricsTieBreakers>
 </document>

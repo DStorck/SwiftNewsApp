@@ -18,8 +18,9 @@ protocol ShowArticlesDelegate  {
 class ViewController: UIViewController {
     
     @IBOutlet weak var downloadActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var usaButton: UIButton!
+   // @IBOutlet weak var usaButton: UIButton!
 
+    @IBOutlet weak var catchUpButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,7 @@ class ViewController: UIViewController {
             default:
                 let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
                 DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
+    
             }
         }
     }
