@@ -15,14 +15,11 @@ class SavedArticlesTableViewController: UITableViewController {
     let realm = try! Realm()
     var article_url = String()
     var article_title = String()
-    //var article_array = [String]()
-    //var savedArticles = [String: String]()
     var realm_articles: Results<Article>!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         realm_articles = realm.objects(Article)
         let article = Article()
@@ -32,14 +29,6 @@ class SavedArticlesTableViewController: UITableViewController {
         try! realm.write {
             realm.add(article)
         }
-        
-        //print("all articles \(realm_articles)")
-        //print("first article? \(realm_articles[0].title!)")
-        
-        
-        //savedArticles[article_title] = article_title
-        //article_array.append(article_title)
-        //print(article_array)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -55,18 +44,14 @@ class SavedArticlesTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return realm_articles.count
     }
 
@@ -77,7 +62,6 @@ class SavedArticlesTableViewController: UITableViewController {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("SavedArticlesTableViewCell", forIndexPath: indexPath) as! SavedArticlesTableViewCell
         
-        //cell.title.text = article_array[indexPath.row]
         cell.title.text = article.title
         valueToPass = article.url
         
@@ -87,9 +71,6 @@ class SavedArticlesTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //print("url \(article_url)")
-        //print(article_array)
-       // print(savedArticles)
         let DestViewController = segue.destinationViewController as! FullArticleViewController
         let articleIndex = tableView.indexPathForSelectedRow?.row
         print(articleIndex)
@@ -117,29 +98,7 @@ class SavedArticlesTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
 
-    }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
