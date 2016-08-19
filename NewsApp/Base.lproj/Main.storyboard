@@ -28,13 +28,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-mS-PkH">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="20" width="343" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZe-lj-dsZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="162"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
                                         <subviews>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2J-pM-6zE">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="40"/>
                                                 <state key="normal" title="CATCH UP!">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,10 +47,10 @@
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-TJ-zEX">
-                                        <rect key="frame" x="0.0" y="162" width="343" height="162"/>
+                                        <rect key="frame" x="0.0" y="151" width="343" height="151"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-jt-HFC">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.55000000000000004" height="1"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
                                                 <state key="normal" image="globe2"/>
@@ -65,7 +65,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="60"/>
                                                 <state key="normal" image="usa"/>
                                                 <connections>
@@ -76,17 +76,17 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="01a-E7-wT9">
-                                        <rect key="frame" x="0.0" y="324" width="343" height="162"/>
+                                        <rect key="frame" x="0.0" y="302" width="343" height="151"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk9-88-UoT">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <state key="normal" image="seattle"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="seattle" id="tIf-8z-NNc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
                                                 <state key="normal" image="capitol"/>
                                                 <connections>
@@ -96,10 +96,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-yO-CJ6">
-                                        <rect key="frame" x="0.0" y="486" width="343" height="162"/>
+                                        <rect key="frame" x="0.0" y="453" width="343" height="151"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
                                                 <state key="normal" image="flask"/>
                                                 <connections>
@@ -107,7 +107,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
-                                                <rect key="frame" x="172" y="0.0" width="172" height="162"/>
+                                                <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
                                                 <state key="normal" image="art"/>
                                                 <connections>
@@ -133,7 +133,16 @@
                             <constraint firstItem="XUb-87-9Ua" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xsx-98-fZ8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VHj-LD-HEr"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Y30-j4-bXf">
+                        <barButtonItem key="rightBarButtonItem" title="Saved Articles" id="vvs-Au-lBz">
+                            <connections>
+                                <action selector="goToSavedArticles:" destination="BYZ-38-t0r" id="x4U-nP-XIk"/>
+                                <segue destination="FXU-x4-lwh" kind="show" identifier="toSaved" id="iuQ-2c-Gle"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="catchUpButton" destination="R2J-pM-6zE" id="zRd-9g-hMQ"/>
@@ -147,7 +156,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1057" y="337"/>
+            <point key="canvasLocation" x="438.5" y="718.5"/>
         </scene>
         <!--SavedArticlesTableViewController-->
         <scene sceneID="2kV-f8-RAM">
@@ -159,7 +168,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedArticlesTableViewCell" id="Lim-27-1X8" customClass="SavedArticlesTableViewCell" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lim-27-1X8" id="TU9-hW-pI7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -187,7 +196,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kks-2w-xcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557.5" y="-484.5"/>
+            <point key="canvasLocation" x="2221.5" y="-543.5"/>
         </scene>
         <!--articleViewController-->
         <scene sceneID="ejH-rX-eYY">
@@ -300,7 +309,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93r-QF-ZmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="337"/>
+            <point key="canvasLocation" x="293" y="-215"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Shm-BH-nXl">
@@ -365,23 +374,6 @@
             </objects>
             <point key="canvasLocation" x="1707" y="1203"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="O8P-3y-9P8">
-            <objects>
-                <viewController id="7SJ-W8-gYA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dc0-c9-oCu"/>
-                        <viewControllerLayoutGuide type="bottom" id="dnm-en-yGG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="f8Q-A8-0RY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qH7-uh-i4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="art" width="128" height="128"/>
@@ -392,9 +384,10 @@
         <image name="usa" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cxK-YX-rEj"/>
-        <segue reference="vUH-Ub-Suh"/>
+        <segue reference="iuQ-2c-Gle"/>
+        <segue reference="Yms-v8-DJN"/>
+        <segue reference="ysi-Tn-u3q"/>
         <segue reference="r03-45-Ou2"/>
-        <segue reference="mbd-5U-spJ"/>
+        <segue reference="egK-Zb-Ki6"/>
     </inferredMetricsTieBreakers>
 </document>

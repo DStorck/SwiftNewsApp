@@ -17,8 +17,11 @@ protocol ShowArticlesDelegate  {
 
 class ViewController: UIViewController {
     
+    @IBAction func goToSavedArticles(sender: AnyObject) {
+        
+    }
     @IBOutlet weak var downloadActivityIndicator: UIActivityIndicatorView!
-   // @IBOutlet weak var usaButton: UIButton!
+
 
     @IBOutlet weak var catchUpButton: UIButton!
 
@@ -68,6 +71,8 @@ class ViewController: UIViewController {
             switch identifier {
             case "search":
                 let DestViewController = segue.destinationViewController as! SearchViewController
+                case "toSaved":
+                let DestViewController = segue.destinationViewController as! SavedArticlesTableViewController
             default:
                 let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
                 DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
