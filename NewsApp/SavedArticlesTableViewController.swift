@@ -17,13 +17,14 @@ class SavedArticlesTableViewController: UITableViewController {
     var article_title = String()
     var article_array = [String]()
     var savedArticles = [String: String]()
-    var all_articles: Results<Article>!
+    var realm_articles: Results<Article>!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        all_articles = realm.objects(Article)
-        //save instance of article to realm article dohickey
+        
+        realm_articles = realm.objects(Article)
         let article = Article()
         article.title = article_title
         article.url = article_url
@@ -32,13 +33,12 @@ class SavedArticlesTableViewController: UITableViewController {
             realm.add(article)
         }
         
-        print("all articles \(all_articles)")
+        print("all articles \(realm_articles)")
+        print("first article? \(realm_articles[0].title!)")
         
         
-        
-        
-        savedArticles[article_title] = article_title
-        article_array.append(article_title)
+        //savedArticles[article_title] = article_title
+        //article_array.append(article_title)
         //print(article_array)
 
         // Uncomment the following line to preserve selection between presentations
@@ -46,6 +46,11 @@ class SavedArticlesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        //so that the table data will refresh when the page is visited again
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,26 +67,23 @@ class SavedArticlesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return savedArticles.count
+        return realm_articles.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let article = article_array[indexPath.row]
+        let article = realm_articles[indexPath.row]
 
         let cell = tableView.dequeueReusableCellWithIdentifier("SavedArticlesTableViewCell", forIndexPath: indexPath) as! SavedArticlesTableViewCell
         
-        cell.title.text = article_array[indexPath.row]
-        //cell.title.text =
-        
-        
-        
-        
-         // Configure the cell...
+        //cell.title.text = article_array[indexPath.row]
+        cell.title.text = article.title
         
 
         return cell
+        
+    
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
