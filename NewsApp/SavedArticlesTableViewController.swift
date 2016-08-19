@@ -55,19 +55,25 @@ class SavedArticlesTableViewController: UITableViewController {
         return realm_articles.count
     }
 
-    var valueToPass: String!
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let article = realm_articles[indexPath.row]
-
         let cell = tableView.dequeueReusableCellWithIdentifier("SavedArticlesTableViewCell", forIndexPath: indexPath) as! SavedArticlesTableViewCell
-        
         cell.title.text = article.title
-        valueToPass = article.url
-        
         return cell
-        
+    }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            let artToDelete = realm_articles[indexPath.row]
+            try! realm.write {
+                realm.delete(artToDelete)
+            }
+            self.tableView.reloadData()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
