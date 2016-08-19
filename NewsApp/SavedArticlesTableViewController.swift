@@ -15,8 +15,8 @@ class SavedArticlesTableViewController: UITableViewController {
     let realm = try! Realm()
     var article_url = String()
     var article_title = String()
-    var article_array = [String]()
-    var savedArticles = [String: String]()
+    //var article_array = [String]()
+    //var savedArticles = [String: String]()
     var realm_articles: Results<Article>!
     
 
@@ -33,8 +33,8 @@ class SavedArticlesTableViewController: UITableViewController {
             realm.add(article)
         }
         
-        print("all articles \(realm_articles)")
-        print("first article? \(realm_articles[0].title!)")
+        //print("all articles \(realm_articles)")
+        //print("first article? \(realm_articles[0].title!)")
         
         
         //savedArticles[article_title] = article_title
@@ -70,7 +70,7 @@ class SavedArticlesTableViewController: UITableViewController {
         return realm_articles.count
     }
 
-    
+    var valueToPass: String!
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let article = realm_articles[indexPath.row]
@@ -79,19 +79,21 @@ class SavedArticlesTableViewController: UITableViewController {
         
         //cell.title.text = article_array[indexPath.row]
         cell.title.text = article.title
+        valueToPass = article.url
         
-
         return cell
         
     
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("url \(article_url)")
-        print(article_array)
-        print(savedArticles)
+        //print("url \(article_url)")
+        //print(article_array)
+       // print(savedArticles)
         let DestViewController = segue.destinationViewController as! FullArticleViewController
-        DestViewController.article_url = article_url
+        let articleIndex = tableView.indexPathForSelectedRow?.row
+        print(articleIndex)
+        DestViewController.article_url = realm_articles[articleIndex!].url!
     }
     
 

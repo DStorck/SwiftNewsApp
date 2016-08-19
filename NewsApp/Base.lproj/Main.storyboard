@@ -175,7 +175,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="title" destination="JqO-lI-KWA" id="8uW-aQ-Y87"/>
-                                    <segue destination="kBt-yh-8c9" kind="show" identifier="artitcleFromSaved" id="r03-45-Ou2"/>
+                                    <segue destination="kBt-yh-8c9" kind="show" identifier="articleFromSaved" id="r03-45-Ou2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
