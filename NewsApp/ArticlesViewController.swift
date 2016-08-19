@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Foundation
-import RealmSwift
+//import RealmSwift
 
 
 enum NewsCategory: Int {

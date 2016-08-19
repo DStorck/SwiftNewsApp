@@ -21,14 +21,20 @@ class SavedArticlesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         realm_articles = realm.objects(Article)
         let article = Article()
         article.title = article_title
         article.url = article_url
         
-        try! realm.write {
-            realm.add(article)
+        if article_url != "" {
+        
+            try! realm.write {
+                realm.add(article)
+            }
         }
+        
+        print(realm_articles)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
