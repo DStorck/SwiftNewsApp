@@ -58,6 +58,7 @@ class ArticlesViewController: UIViewController {
         case .breaking:
             requestURL = ""
         case .search:
+            searchTerm = searchTerm.stringByReplacingOccurrencesOfString(" ", withString: "%20")
             requestURL = searchTerm
         }
         
