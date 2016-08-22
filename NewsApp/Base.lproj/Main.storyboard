@@ -216,8 +216,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
-                                <rect key="frame" x="16" y="175" width="343" height="317"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
+                                <rect key="frame" x="16" y="70" width="343" height="169"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -225,8 +225,8 @@
                                     <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="IIQ-ka-V5U"/>
                                 </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqO-dp-kcL">
-                                <rect key="frame" x="122" y="441" width="127" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqO-dp-kcL">
+                                <rect key="frame" x="98" y="343" width="178" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Save Article">
@@ -242,9 +242,12 @@
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="J0f-mg-xMG" firstAttribute="leading" secondItem="e0A-qw-S5k" secondAttribute="leadingMargin" id="7B4-3y-UQk"/>
-                            <constraint firstItem="J0f-mg-xMG" firstAttribute="top" secondItem="1ft-wM-M23" secondAttribute="bottom" constant="111" id="7bC-WL-L8i"/>
+                            <constraint firstItem="J0f-mg-xMG" firstAttribute="top" secondItem="1ft-wM-M23" secondAttribute="bottom" constant="10" id="7bC-WL-L8i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J0f-mg-xMG" secondAttribute="trailing" id="9yE-Nk-DAR"/>
                             <constraint firstItem="wg8-Bb-RDN" firstAttribute="top" secondItem="J0f-mg-xMG" secondAttribute="bottom" constant="175" id="Bxj-cQ-Lir"/>
+                            <constraint firstItem="J0f-mg-xMG" firstAttribute="centerX" secondItem="e0A-qw-S5k" secondAttribute="centerX" id="Nu4-tH-xX9"/>
+                            <constraint firstItem="wg8-Bb-RDN" firstAttribute="top" secondItem="rqO-dp-kcL" secondAttribute="bottom" constant="196" id="X7c-oV-NbG"/>
+                            <constraint firstItem="rqO-dp-kcL" firstAttribute="centerX" secondItem="e0A-qw-S5k" secondAttribute="centerX" id="m1E-cd-NmO"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="iIe-gG-PIk"/>
@@ -280,7 +283,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1693.5" y="325.5"/>
+            <point key="canvasLocation" x="1737.5" y="427.5"/>
         </scene>
         <!--Full Article View Controller-->
         <scene sceneID="GTZ-2n-2cD">
@@ -330,7 +333,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter search term:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD4-yC-RdQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter search term:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD4-yC-RdQ">
                                 <rect key="frame" x="20" y="72" width="335" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="bd3-It-SQO"/>
@@ -360,13 +363,17 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sy2-zz-l4x" firstAttribute="top" secondItem="zPZ-io-Hzn" secondAttribute="bottom" constant="52" id="13n-NP-ZWx"/>
+                            <constraint firstItem="DD4-yC-RdQ" firstAttribute="centerX" secondItem="XJd-Lc-aay" secondAttribute="centerX" id="A3E-yu-lv0"/>
                             <constraint firstItem="zPZ-io-Hzn" firstAttribute="top" secondItem="DD4-yC-RdQ" secondAttribute="bottom" constant="41" id="FM3-By-Ko0"/>
                             <constraint firstItem="DD4-yC-RdQ" firstAttribute="top" secondItem="GiK-Kx-7Ya" secondAttribute="bottom" constant="52" id="KbS-fr-9ba"/>
+                            <constraint firstItem="zPZ-io-Hzn" firstAttribute="centerX" secondItem="XJd-Lc-aay" secondAttribute="centerX" id="o96-dT-HCY"/>
                             <constraint firstItem="sy2-zz-l4x" firstAttribute="leading" secondItem="zPZ-io-Hzn" secondAttribute="trailing" constant="-200" id="pW1-sU-uNU"/>
+                            <constraint firstItem="sy2-zz-l4x" firstAttribute="centerX" secondItem="XJd-Lc-aay" secondAttribute="centerX" id="rg0-jk-YQJ"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="searchButton" destination="sy2-zz-l4x" id="UfS-9K-riC"/>
                         <outlet property="searchInput" destination="zPZ-io-Hzn" id="2wq-Dg-3Y9"/>
                     </connections>
                 </viewController>

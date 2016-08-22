@@ -10,6 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    @IBOutlet weak var searchButton: UIButton!
+   
     
     @IBOutlet weak var searchInput: UITextField!
     
@@ -19,13 +21,14 @@ class SearchViewController: UIViewController {
         print("input please:\(input)")
     }
     
-    func search() {
-        print("we are in the search method")
-    }
+//    func search() {
+//        print("we are in the search method")
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        search()
+//        search()
+         self.searchButton.layer.cornerRadius = 10;
     }
 
     override func didReceiveMemoryWarning() {
