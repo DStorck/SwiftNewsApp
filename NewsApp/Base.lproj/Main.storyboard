@@ -360,6 +360,8 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sy2-zz-l4x" firstAttribute="top" secondItem="zPZ-io-Hzn" secondAttribute="bottom" constant="52" id="13n-NP-ZWx"/>
+                            <constraint firstItem="zPZ-io-Hzn" firstAttribute="top" secondItem="DD4-yC-RdQ" secondAttribute="bottom" constant="41" id="FM3-By-Ko0"/>
+                            <constraint firstItem="DD4-yC-RdQ" firstAttribute="top" secondItem="GiK-Kx-7Ya" secondAttribute="bottom" constant="52" id="KbS-fr-9ba"/>
                             <constraint firstItem="sy2-zz-l4x" firstAttribute="leading" secondItem="zPZ-io-Hzn" secondAttribute="trailing" constant="-200" id="pW1-sU-uNU"/>
                         </constraints>
                     </view>
