@@ -66,7 +66,7 @@ class ArticlesViewController: UIViewController {
             "X-backend-news-token": "9320d5b271b105247a82e74dd8d78924251d3cb46f4da5ecae455bbcc3fd9b47bce0702b21050ad4cd5175e587efdb22fa2d3649fa6baeea96de8ca6afc80896"
         ]
         
-        Alamofire.request(.GET, "http://localhost:3000/\(requestURL)/\(self.page)", headers: headers).validate().responseJSON { response in
+        Alamofire.request(.GET, "https://backend-news-api.herokuapp.com/\(requestURL)/\(self.page)", headers: headers).validate().responseJSON { response in
             switch response.result {
             case .Success:
                 self.articles = []
