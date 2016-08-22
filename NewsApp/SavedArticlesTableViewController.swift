@@ -21,7 +21,6 @@ class SavedArticlesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         realm_articles = realm.objects(Article)
         let article = Article()
         article.title = article_title

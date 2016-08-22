@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/ArticlesViewController.swift"
-            timestampString = "493255735.365301"
+            timestampString = "493579181.2245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/ArticlesViewController.swift"
-            timestampString = "493255735.365301"
+            timestampString = "493579181.2245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/ArticlesViewController.swift"
-            timestampString = "493255735.365301"
+            timestampString = "493579181.2245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "ArticlesViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/ArticlesViewController.swift"
-            timestampString = "493255735.365301"
+            timestampString = "493579181.2245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "ArticlesViewController"
             landmarkType = "3">
             <Locations>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/ArticlesViewController.swift"
-            timestampString = "493255735.365301"
+            timestampString = "493579181.2245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/ArticlesViewController.swift"
-            timestampString = "493255735.365301"
+            timestampString = "493579181.2245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "ArticlesViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -264,12 +264,215 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/SavedArticlesTableViewController.swift"
-            timestampString = "493335595.922411"
+            timestampString = "493579069.408211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/SavedArticlesTableViewController.swift"
+            timestampString = "493429796.08624"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "SavedArticlesTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.realm.getter : RealmSwift.Realm"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429796.780353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.init (style : __C.UITableViewStyle) -&gt; NewsApp.SavedArticlesTableViewController"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429796.780739"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; NewsApp.SavedArticlesTableViewController"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429796.780882"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;NewsApp.SavedArticlesTableViewController&gt;"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429796.781013"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/SavedArticlesTableViewController.swift"
+            timestampString = "493429797.172107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "SavedArticlesTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.realm_articles.getter : Swift.ImplicitlyUnwrappedOptional&lt;RealmSwift.Results&lt;NewsApp.Article&gt;&gt;"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429797.178228"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.realm_articles.setter : Swift.ImplicitlyUnwrappedOptional&lt;RealmSwift.Results&lt;NewsApp.Article&gt;&gt;"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429797.178668"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.init (style : __C.UITableViewStyle) -&gt; NewsApp.SavedArticlesTableViewController"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429797.17895"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "162">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; NewsApp.SavedArticlesTableViewController"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429797.179102"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.SavedArticlesTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;NewsApp.SavedArticlesTableViewController&gt;"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deirdrestorck/C5/IOSNewsApp/NewsApp/SavedArticlesTableViewController.swift"
+                  timestampString = "493429797.179215"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "165">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/SavedArticlesTableViewController.swift"
+            timestampString = "493429798.468162"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/SavedArticlesTableViewController.swift"
+            timestampString = "493430912.527278"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

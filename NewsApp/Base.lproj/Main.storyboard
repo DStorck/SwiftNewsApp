@@ -168,13 +168,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedArticlesTableViewCell" id="Lim-27-1X8" customClass="SavedArticlesTableViewCell" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lim-27-1X8" id="TU9-hW-pI7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqO-lI-KWA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqO-lI-KWA">
                                             <rect key="frame" x="30" y="8" width="309" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -247,6 +247,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="articleTitle" destination="J0f-mg-xMG" id="Vu2-35-fMa"/>
+                        <outlet property="saveButton" destination="rqO-dp-kcL" id="Ysv-dF-0t1"/>
                         <outlet property="swipeLeftTest" destination="J0f-mg-xMG" id="3IM-6e-9Zv"/>
                     </connections>
                 </viewController>
@@ -323,15 +324,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter search term:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD4-yC-RdQ">
-                                <rect key="frame" x="104" y="74" width="206" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="bd3-It-SQO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sy2-zz-l4x">
                                 <rect key="frame" x="157" y="216" width="101" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -349,6 +341,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter search term:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD4-yC-RdQ">
+                                <rect key="frame" x="51" y="72" width="273" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bd3-It-SQO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -372,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uop-hD-R60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1707" y="1203"/>
+            <point key="canvasLocation" x="1706.5" y="1202.5"/>
         </scene>
     </scenes>
     <resources>
@@ -384,10 +385,10 @@
         <image name="usa" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iuQ-2c-Gle"/>
-        <segue reference="Yms-v8-DJN"/>
-        <segue reference="ysi-Tn-u3q"/>
-        <segue reference="r03-45-Ou2"/>
-        <segue reference="egK-Zb-Ki6"/>
+        <segue reference="MN4-Fr-s8u"/>
+        <segue reference="cxK-YX-rEj"/>
+        <segue reference="vUH-Ub-Suh"/>
+        <segue reference="bDf-ro-wlo"/>
+        <segue reference="mbd-5U-spJ"/>
     </inferredMetricsTieBreakers>
 </document>

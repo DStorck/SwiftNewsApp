@@ -38,6 +38,8 @@ class ArticlesViewController: UIViewController {
     @IBAction func save(sender: AnyObject) {
     }
     
+    @IBOutlet weak var saveButton: UIButton!
+    
     func updateArticleArray() {
         var requestURL: String
         switch newsCategory {
@@ -74,6 +76,7 @@ class ArticlesViewController: UIViewController {
                     }
                     print(requestURL)
                     print(self.articles)
+                    self.self.saveButton.enabled = true
                     
                     if self.articles.count == 0 {
                         self.articleTitle.text = "Sorry, no articles matched that search term"
@@ -104,6 +107,10 @@ class ArticlesViewController: UIViewController {
     
     
     //@IBOutlet var scrollView: UIScrollView!
+    
+    override func viewWillAppear(animated: Bool) {
+        saveButton.enabled = false
+    }
     
     
     override func viewDidLoad() {
