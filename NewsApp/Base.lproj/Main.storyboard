@@ -53,6 +53,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.55000000000000004" height="1"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
+                                                <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
                                                 <state key="normal" image="globe2"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -67,6 +68,7 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQO-bn-z1O">
                                                 <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="60"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="20" maxX="30" maxY="20"/>
                                                 <state key="normal" image="usa"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="usa" id="GTL-K4-rHR"/>
@@ -80,7 +82,8 @@
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk9-88-UoT">
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
-                                                <state key="normal" image="seattle"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="25" maxX="30" maxY="25"/>
+                                                <state key="normal" image="seattle2"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="seattle" id="tIf-8z-NNc"/>
                                                 </connections>
@@ -88,7 +91,8 @@
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
                                                 <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
-                                                <state key="normal" image="capitol"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
+                                                <state key="normal" image="pol-real"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="pol" id="cYk-wr-CKe"/>
                                                 </connections>
@@ -101,7 +105,8 @@
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
-                                                <state key="normal" image="flask"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="30" maxX="40" maxY="30"/>
+                                                <state key="normal" image="science"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="science" id="IKH-B9-jjv"/>
                                                 </connections>
@@ -109,6 +114,7 @@
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-ZF-kEE">
                                                 <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="30" maxX="30" maxY="30"/>
                                                 <state key="normal" image="art"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="art" id="XRQ-wQ-Rcg"/>
@@ -389,17 +395,17 @@
     </scenes>
     <resources>
         <image name="art" width="128" height="128"/>
-        <image name="capitol" width="128" height="128"/>
-        <image name="flask" width="128" height="128"/>
         <image name="globe2" width="128" height="128"/>
-        <image name="seattle" width="100" height="100"/>
-        <image name="usa" width="80" height="80"/>
+        <image name="pol-real" width="200" height="200"/>
+        <image name="science" width="128" height="128"/>
+        <image name="seattle2" width="200" height="200"/>
+        <image name="usa" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MN4-Fr-s8u"/>
-        <segue reference="cxK-YX-rEj"/>
-        <segue reference="vUH-Ub-Suh"/>
-        <segue reference="bDf-ro-wlo"/>
+        <segue reference="iuQ-2c-Gle"/>
         <segue reference="mbd-5U-spJ"/>
+        <segue reference="ysi-Tn-u3q"/>
+        <segue reference="bDf-ro-wlo"/>
+        <segue reference="egK-Zb-Ki6"/>
     </inferredMetricsTieBreakers>
 </document>

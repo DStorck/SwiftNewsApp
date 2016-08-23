@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(swipeUp)
         
         
-       // assignBackground()
+       assignBackground()
     }
     
     func search(sender: UISwipeGestureRecognizer) {
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         }
     }
     
-    /*
+    
     func assignBackground(){
         let background = UIImage(named: "background")
         var imageView : UIImageView!
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
-    }*/
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
