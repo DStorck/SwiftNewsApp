@@ -11,6 +11,7 @@ target 'NewsApp' do
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'RealmSwift'
+pod 'ReachabilitySwift'
 
   target 'NewsAppTests' do
     inherit! :search_paths

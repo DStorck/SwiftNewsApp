@@ -34,11 +34,18 @@ class ArticlesViewController: UIViewController {
     var swipes = 0
     var page = 1
     
+    @IBOutlet weak var saveButton: UIButton!
+    @IBAction func save(sender: AnyObject) {}
+    @IBOutlet weak var swipeLeftTest: UILabel!
     
-    @IBAction func save(sender: AnyObject) {
+    @IBAction func info(sender: AnyObject) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("infoPopUp") as! PopUpViewController
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view )
+        popUpVC.didMoveToParentViewController(self)
     }
     
-    @IBOutlet weak var saveButton: UIButton!
     
     func updateArticleArray() {
         var requestURL: String
@@ -108,10 +115,6 @@ class ArticlesViewController: UIViewController {
         print("did we make this work yet?")
     }
     
-    @IBOutlet weak var swipeLeftTest: UILabel!
-    
-    
-    //@IBOutlet var scrollView: UIScrollView!
     
     override func viewWillAppear(animated: Bool) {
         saveButton.enabled = false
