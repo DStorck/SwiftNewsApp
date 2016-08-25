@@ -25,7 +25,6 @@ enum NewsCategory: Int {
 
 class ArticlesViewController: UIViewController {
 
-    
     var searchTerm = String()
     var articles = [String]()
     var article_dict = [String: String]()
@@ -100,6 +99,7 @@ class ArticlesViewController: UIViewController {
                 }
             case .Failure(let error):
                 print(error)
+                self.saveButton.enabled = false
             }
         }
     }
@@ -110,7 +110,9 @@ class ArticlesViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
+        if articles.count == 0 {
         saveButton.enabled = false
+        }
     }
     
     

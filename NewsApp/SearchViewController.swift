@@ -17,7 +17,6 @@ class SearchViewController: UIViewController {
     
     @IBAction func doSearch(sender: AnyObject) {
         var input = String(searchInput.text)
-        print("we are in the DoSearch method")
         print("input please:\(input)")
     }
     

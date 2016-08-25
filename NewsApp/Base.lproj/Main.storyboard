@@ -162,7 +162,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="438.5" y="718.5"/>
+            <point key="canvasLocation" x="1014.5" y="590.5"/>
         </scene>
         <!--SavedArticlesTableViewController-->
         <scene sceneID="2kV-f8-RAM">
@@ -222,15 +222,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
-                                <rect key="frame" x="52" y="70" width="274" height="169"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="IIQ-ka-V5U"/>
-                                </connections>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqO-dp-kcL">
                                 <rect key="frame" x="81" y="341" width="213" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -256,20 +247,22 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="A84-io-nrT">
                                 <rect key="frame" x="177" y="210" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-mg-xMG">
+                                <rect key="frame" x="52" y="218" width="274" height="102"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="IIQ-ka-V5U"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="J0f-mg-xMG" firstAttribute="leading" secondItem="e0A-qw-S5k" secondAttribute="leadingMargin" constant="30" id="43f-zF-FeL"/>
-                            <constraint firstItem="J0f-mg-xMG" firstAttribute="leading" secondItem="e0A-qw-S5k" secondAttribute="leadingMargin" id="7B4-3y-UQk"/>
-                            <constraint firstItem="J0f-mg-xMG" firstAttribute="top" secondItem="1ft-wM-M23" secondAttribute="bottom" constant="10" id="7bC-WL-L8i"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="J0f-mg-xMG" secondAttribute="trailing" id="9yE-Nk-DAR"/>
-                            <constraint firstItem="wg8-Bb-RDN" firstAttribute="top" secondItem="J0f-mg-xMG" secondAttribute="bottom" constant="175" id="Bxj-cQ-Lir"/>
                             <constraint firstItem="J0f-mg-xMG" firstAttribute="centerX" secondItem="e0A-qw-S5k" secondAttribute="centerX" id="Nu4-tH-xX9"/>
-                            <constraint firstItem="J0f-mg-xMG" firstAttribute="centerY" secondItem="e0A-qw-S5k" secondAttribute="centerY" id="UrB-Fj-2vr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rqO-dp-kcL" secondAttribute="trailing" constant="40" id="VQi-5D-45L"/>
                             <constraint firstItem="wg8-Bb-RDN" firstAttribute="top" secondItem="rqO-dp-kcL" secondAttribute="bottom" constant="196" id="X7c-oV-NbG"/>
                             <constraint firstItem="rqO-dp-kcL" firstAttribute="leading" secondItem="e0A-qw-S5k" secondAttribute="leadingMargin" constant="40" id="cRH-7d-rcz"/>
-                            <constraint firstItem="J0f-mg-xMG" firstAttribute="centerX" secondItem="e0A-qw-S5k" secondAttribute="centerX" id="fQV-s2-676"/>
                             <constraint firstItem="rqO-dp-kcL" firstAttribute="centerX" secondItem="e0A-qw-S5k" secondAttribute="centerX" id="m1E-cd-NmO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J0f-mg-xMG" secondAttribute="trailing" constant="30" id="nWv-XQ-nOd"/>
                         </constraints>
@@ -344,7 +337,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93r-QF-ZmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="-215"/>
+            <point key="canvasLocation" x="789" y="-431"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Shm-BH-nXl">
@@ -456,23 +449,6 @@
             </objects>
             <point key="canvasLocation" x="2268.5" y="1288.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="mVp-8x-uvY">
-            <objects>
-                <viewController id="Gbn-YW-UhM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HhG-xi-WOe"/>
-                        <viewControllerLayoutGuide type="bottom" id="hg5-MQ-fep"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CB0-Py-mpq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F30-Yz-1hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="art" width="128" height="128"/>
@@ -483,10 +459,10 @@
         <image name="usa" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MN4-Fr-s8u"/>
-        <segue reference="cxK-YX-rEj"/>
-        <segue reference="vUH-Ub-Suh"/>
         <segue reference="bDf-ro-wlo"/>
+        <segue reference="ysi-Tn-u3q"/>
         <segue reference="mbd-5U-spJ"/>
+        <segue reference="MN4-Fr-s8u"/>
+        <segue reference="vUH-Ub-Suh"/>
     </inferredMetricsTieBreakers>
 </document>
