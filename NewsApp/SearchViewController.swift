@@ -21,14 +21,10 @@ class SearchViewController: UIViewController {
         print("input please:\(input)")
     }
     
-//    func search() {
-//        print("we are in the search method")
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        search()
-         self.searchButton.layer.cornerRadius = 10;
+        self.searchButton.layer.cornerRadius = 10;
     }
 
     override func didReceiveMemoryWarning() {

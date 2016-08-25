@@ -17,12 +17,8 @@ protocol ShowArticlesDelegate  {
 
 class ViewController: UIViewController {
     
-    @IBAction func goToSavedArticles(sender: AnyObject) {
-        
-    }
+    @IBAction func goToSavedArticles(sender: AnyObject) {}
     @IBOutlet weak var downloadActivityIndicator: UIActivityIndicatorView!
-
-
     @IBOutlet weak var catchUpButton: UIButton!
 
     override func viewDidLoad() {
@@ -32,8 +28,7 @@ class ViewController: UIViewController {
         swipeUp.direction = .Up
         view.addGestureRecognizer(swipeUp)
         
-        
-       assignBackground()
+        assignBackground()
     }
     
     func search(sender: UISwipeGestureRecognizer) {
@@ -60,19 +55,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
-//        DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
-//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
             switch identifier {
             case "search":
-                let DestViewController = segue.destinationViewController as! SearchViewController
-                case "toSaved":
-                let DestViewController = segue.destinationViewController as! SavedArticlesTableViewController
+                segue.destinationViewController as! SearchViewController
+            case "toSaved":
+                segue.destinationViewController as! SavedArticlesTableViewController
             default:
                 let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
                 DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
@@ -80,14 +70,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    override func shouldAutorotate() -> Bool {
-        return false
-    }
-    
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Portrait
-    }
+   
 
     
 
