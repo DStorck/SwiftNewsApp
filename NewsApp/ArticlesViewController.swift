@@ -96,6 +96,7 @@ class ArticlesViewController: UIViewController {
                     } else {
                     self.articleTitle.text = self.articles[self.swipes]
                     self.page += 1
+                    self.activityIndicator.stopAnimating()
                     }
                 }
             case .Failure(let error):
@@ -124,6 +125,8 @@ class ArticlesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         self.saveButton.layer.cornerRadius = 10;
         if swipes == 0 {
             print("count: \(articles.count)")
