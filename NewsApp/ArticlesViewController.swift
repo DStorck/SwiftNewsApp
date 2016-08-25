@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Foundation
-//import RealmSwift
 
 
 enum NewsCategory: Int {
@@ -109,14 +108,6 @@ class ArticlesViewController: UIViewController {
         self.articleTitle.text = self.articles[swipes]
     }
     
-    @IBAction func loadNextArticle(sender: AnyObject) {
-        print("loadnextArticle method")
-    }
-    
-    func ShowOneTitle(article: String) {
-        print("did we make this work yet?")
-    }
-    
     
     override func viewWillAppear(animated: Bool) {
         saveButton.enabled = false
@@ -198,10 +189,6 @@ class ArticlesViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-//    
-//    @IBAction func tap(sender: AnyObject) {
-//        print("foo")
-//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
@@ -214,9 +201,9 @@ class ArticlesViewController: UIViewController {
                     let DestViewController = segue.destinationViewController as! FullArticleViewController
                     DestViewController.article_url = article_dict[articles[swipes]]!
                 case "home":
-                    let DestViewContoller = segue.destinationViewController as! ViewController
+                    segue.destinationViewController as! ViewController
                 case "search":
-                    let DestViewController = segue.destinationViewController as! SearchViewController
+                    segue.destinationViewController as! SearchViewController
             default:
                 break
             }
