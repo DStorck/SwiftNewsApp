@@ -123,6 +123,7 @@ class ArticlesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = ""
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         self.saveButton.layer.cornerRadius = 10;

@@ -213,7 +213,7 @@
         <!--articleViewController-->
         <scene sceneID="ejH-rX-eYY">
             <objects>
-                <viewController title="articleViewController" id="uTI-rj-Vy2" customClass="ArticlesViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="articleViewController" automaticallyAdjustsScrollViewInsets="NO" id="uTI-rj-Vy2" customClass="ArticlesViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1ft-wM-M23"/>
                         <viewControllerLayoutGuide type="bottom" id="wg8-Bb-RDN"/>
