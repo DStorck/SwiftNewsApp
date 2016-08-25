@@ -270,6 +270,14 @@
                             <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="iIe-gG-PIk"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="ePe-vZ-uJu" userLabel="NavigationItem">
+                        <barButtonItem key="rightBarButtonItem" title="Saved Articles" id="4UL-sd-d1b" userLabel="Saved Articles">
+                            <connections>
+                                <action selector="goToSavedArticles:" destination="uTI-rj-Vy2" id="1ox-Wy-78I"/>
+                                <segue destination="FXU-x4-lwh" kind="show" identifier="toSaved" id="BFp-f7-JZ0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="activityIndicator" destination="A84-io-nrT" id="zXb-xY-3L1"/>
@@ -474,7 +482,7 @@
         <segue reference="bDf-ro-wlo"/>
         <segue reference="ysi-Tn-u3q"/>
         <segue reference="mbd-5U-spJ"/>
-        <segue reference="MN4-Fr-s8u"/>
+        <segue reference="BFp-f7-JZ0"/>
         <segue reference="vUH-Ub-Suh"/>
     </inferredMetricsTieBreakers>
 </document>

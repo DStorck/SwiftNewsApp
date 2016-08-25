@@ -32,6 +32,8 @@ class ArticlesViewController: UIViewController {
     var swipes = 0
     var page = 1
     
+    @IBAction func goToSavedArticles(sender: AnyObject) {
+    }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func save(sender: AnyObject) {}
@@ -207,6 +209,8 @@ class ArticlesViewController: UIViewController {
                     DestViewController.article_url = article_dict[articles[swipes]]!
                 case "home":
                     segue.destinationViewController as! ViewController
+                case "toSaved":
+                    segue.destinationViewController as! SavedArticlesTableViewController
                 case "search":
                     segue.destinationViewController as! SearchViewController
             default:
