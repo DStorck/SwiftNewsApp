@@ -27,6 +27,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        if Reachability.isConnectedToNetwork() == true {
+//            print("Internet connection OK")
+//        } else {
+//            print("Internet connection FAILED")
+//        }
         
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.search(_:)))
         swipeUp.direction = .Up
@@ -35,6 +40,7 @@ class ViewController: UIViewController {
         
        assignBackground()
     }
+    
     
     func search(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Up {

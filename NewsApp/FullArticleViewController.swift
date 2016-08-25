@@ -6,6 +6,7 @@
 //  Copyright © 2016 Deirdre Storck. All rights reserved.
 //
 
+
 import UIKit
 
 class FullArticleViewController: UIViewController {
@@ -13,21 +14,21 @@ class FullArticleViewController: UIViewController {
     var article_url = String()
     
     @IBOutlet var webView: UIWebView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("in full aritcle controller - url: \(article_url)")
+        print("in full article controller - url: \(article_url)")
         
         let url = NSURL(string: self.article_url)
         let request = NSURLRequest(URL: url!)
-        
+        print("request \(request)")
         webView.loadRequest(request)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-  
-
+    
+    
 }

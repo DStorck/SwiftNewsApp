@@ -34,6 +34,9 @@ class ArticlesViewController: UIViewController {
     var swipes = 0
     var page = 1
     
+    
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func save(sender: AnyObject) {}
     @IBOutlet weak var swipeLeftTest: UILabel!
@@ -96,9 +99,11 @@ class ArticlesViewController: UIViewController {
                     self.articleTitle.text = self.articles[self.swipes]
                     self.page += 1
                     }
+                    self.activityIndicator.stopAnimating()
                 }
             case .Failure(let error):
                 print(error)
+                self.articleTitle.text = "No network connection."
             }
         }
     }
@@ -123,6 +128,8 @@ class ArticlesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         self.saveButton.layer.cornerRadius = 10;
         if swipes == 0 {
             print("count: \(articles.count)")

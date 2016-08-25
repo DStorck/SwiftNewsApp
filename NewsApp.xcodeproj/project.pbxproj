@@ -25,6 +25,8 @@
 		9FF088AB1D5CE92600BC7ED2 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF088AA1D5CE92600BC7ED2 /* ArticlesViewController.swift */; };
 		9FF5DBC51D667E5B0069F4E9 /* ArticleRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5DBC41D667E5B0069F4E9 /* ArticleRealm.swift */; };
 		9FF5DBC71D6E36FF0069F4E9 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5DBC61D6E36FF0069F4E9 /* PopUpViewController.swift */; };
+		9FF5DBC91D6E55650069F4E9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5DBC81D6E55650069F4E9 /* Reachability.swift */; };
+		9FF5DBCB1D6E65680069F4E9 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5DBCA1D6E65680069F4E9 /* NetworkViewController.swift */; };
 		F54D7260FBC1076F1464BC76 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79FC1E0548A3B6FF72F0A93 /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		9FF088AA1D5CE92600BC7ED2 /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		9FF5DBC41D667E5B0069F4E9 /* ArticleRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleRealm.swift; sourceTree = "<group>"; };
 		9FF5DBC61D6E36FF0069F4E9 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		9FF5DBC81D6E55650069F4E9 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9FF5DBCA1D6E65680069F4E9 /* NetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		B3C63567F7D7537C32DBDE78 /* Pods-NewsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppTests/Pods-NewsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6F3E6836F5A69719BC41D54 /* Pods-NewsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppUITests/Pods-NewsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D79FC1E0548A3B6FF72F0A93 /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,8 +158,10 @@
 				9F6C96111D64E2FF0022EF4A /* SearchViewController.swift */,
 				9F6C96191D665C100022EF4A /* SavedArticlesTableViewController.swift */,
 				9FF5DBC41D667E5B0069F4E9 /* ArticleRealm.swift */,
+				9FF5DBC81D6E55650069F4E9 /* Reachability.swift */,
 				9FD0E51C1D625D8E0078BD3F /* FullArticleViewController.swift */,
 				9FDB8EE91D5A741800BA772B /* Main.storyboard */,
+				9FF5DBCA1D6E65680069F4E9 /* NetworkViewController.swift */,
 				9F6C96151D6658D70022EF4A /* SavedArticlesTableViewCell.swift */,
 				9FDB8EEC1D5A741800BA772B /* Assets.xcassets */,
 				9FDB8EEE1D5A741800BA772B /* LaunchScreen.storyboard */,
@@ -461,12 +467,14 @@
 			files = (
 				9F6C96121D64E2FF0022EF4A /* SearchViewController.swift in Sources */,
 				9FD0E51D1D625D8E0078BD3F /* FullArticleViewController.swift in Sources */,
+				9FF5DBCB1D6E65680069F4E9 /* NetworkViewController.swift in Sources */,
 				9FF5DBC51D667E5B0069F4E9 /* ArticleRealm.swift in Sources */,
 				9F6C961A1D665C100022EF4A /* SavedArticlesTableViewController.swift in Sources */,
 				9FF088AB1D5CE92600BC7ED2 /* ArticlesViewController.swift in Sources */,
 				9FDB8EE81D5A741800BA772B /* ViewController.swift in Sources */,
 				9F6C96161D6658D70022EF4A /* SavedArticlesTableViewCell.swift in Sources */,
 				9FF5DBC71D6E36FF0069F4E9 /* PopUpViewController.swift in Sources */,
+				9FF5DBC91D6E55650069F4E9 /* Reachability.swift in Sources */,
 				9FDB8EE61D5A741800BA772B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
