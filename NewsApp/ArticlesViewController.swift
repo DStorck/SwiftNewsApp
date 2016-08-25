@@ -100,6 +100,9 @@ class ArticlesViewController: UIViewController {
             case .Failure(let error):
                 print(error)
                 self.saveButton.enabled = false
+                self.activityIndicator.stopAnimating()
+                self.articleTitle.text = "NO WIFI"
+                
             }
         }
     }
