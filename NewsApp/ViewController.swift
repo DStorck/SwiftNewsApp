@@ -11,9 +11,6 @@ import Alamofire
 import SwiftyJSON
 import Foundation
 
-protocol ShowArticlesDelegate  {
-    func showOneTitle(title: String) -> String
-}
 
 class ViewController: UIViewController {
     
