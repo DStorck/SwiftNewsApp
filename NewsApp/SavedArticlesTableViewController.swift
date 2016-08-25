@@ -17,7 +17,6 @@ class SavedArticlesTableViewController: UITableViewController {
     var article_title = String()
     var realm_articles: Results<Article>!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -28,7 +27,8 @@ class SavedArticlesTableViewController: UITableViewController {
         article.title = article_title
         article.url = article_url
         
-        if article_url != "" {
+        let doesArticleExist = try! Realm().objects(Article).filter("title == %@", article_title).first
+        if article_url != "" && doesArticleExist == nil {
             try! realm.write {
                 realm.add(article)
             }
