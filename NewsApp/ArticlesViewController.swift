@@ -34,6 +34,7 @@ class ArticlesViewController: UIViewController {
     var swipes = 0
     var page = 1
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func save(sender: AnyObject) {}
     @IBOutlet weak var swipeLeftTest: UILabel!

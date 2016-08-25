@@ -253,6 +253,9 @@
                                     <action selector="info:" destination="uTI-rj-Vy2" eventType="touchUpInside" id="1qq-eZ-VLf"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="A84-io-nrT">
+                                <rect key="frame" x="177" y="210" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -276,6 +279,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="A84-io-nrT" id="zXb-xY-3L1"/>
                         <outlet property="articleTitle" destination="J0f-mg-xMG" id="Vu2-35-fMa"/>
                         <outlet property="saveButton" destination="rqO-dp-kcL" id="Ysv-dF-0t1"/>
                         <outlet property="swipeLeftTest" destination="J0f-mg-xMG" id="3IM-6e-9Zv"/>
