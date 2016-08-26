@@ -124,19 +124,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XUb-87-9Ua">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XUb-87-9Ua" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1VA-jj-yvv"/>
                             <constraint firstItem="2yX-mS-PkH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Odd-cz-LCS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2yX-mS-PkH" secondAttribute="bottom" id="POd-9L-8wA"/>
                             <constraint firstItem="2yX-mS-PkH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dGI-sQ-nEx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2yX-mS-PkH" secondAttribute="trailing" id="o8M-D2-FfG"/>
-                            <constraint firstItem="XUb-87-9Ua" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xsx-98-fZ8"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -152,7 +146,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="catchUpButton" destination="R2J-pM-6zE" id="zRd-9g-hMQ"/>
-                        <outlet property="downloadActivityIndicator" destination="XUb-87-9Ua" id="qlD-uq-Iov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -252,9 +245,6 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="IIQ-ka-V5U"/>
-                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -266,9 +256,6 @@
                             <constraint firstItem="rqO-dp-kcL" firstAttribute="centerX" secondItem="e0A-qw-S5k" secondAttribute="centerX" id="m1E-cd-NmO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J0f-mg-xMG" secondAttribute="trailing" constant="30" id="nWv-XQ-nOd"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Xub-Kq-3Cw" appends="YES" id="iIe-gG-PIk"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ePe-vZ-uJu" userLabel="NavigationItem">
                         <barButtonItem key="rightBarButtonItem" title="Saved Articles" id="4UL-sd-d1b" userLabel="Saved Articles">
@@ -287,12 +274,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMS-cS-Ung" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="woP-yt-01p">
-                    <connections>
-                        <action selector="tap:" destination="uTI-rj-Vy2" id="nb3-DD-g5u"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="Xub-Kq-3Cw"/>
                 <swipeGestureRecognizer direction="right" id="hyH-a9-YSh" userLabel="Full Article Swipe Gesture Recognizer">
                     <connections>
                         <segue destination="kBt-yh-8c9" kind="show" identifier="fullArticle" id="bDf-ro-wlo"/>
@@ -482,7 +463,7 @@
         <segue reference="bDf-ro-wlo"/>
         <segue reference="ysi-Tn-u3q"/>
         <segue reference="mbd-5U-spJ"/>
-        <segue reference="BFp-f7-JZ0"/>
+        <segue reference="MN4-Fr-s8u"/>
         <segue reference="vUH-Ub-Suh"/>
     </inferredMetricsTieBreakers>
 </document>

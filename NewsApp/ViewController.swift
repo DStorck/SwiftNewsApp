@@ -15,18 +15,7 @@ import Foundation
 class ViewController: UIViewController {
     
     @IBAction func goToSavedArticles(sender: AnyObject) {}
-    @IBOutlet weak var downloadActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var catchUpButton: UIButton!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.search(_:)))
-        swipeUp.direction = .Up
-        view.addGestureRecognizer(swipeUp)
-        
-        assignBackground()
-    }
     
     func search(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Up {
@@ -46,6 +35,16 @@ class ViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.search(_:)))
+        swipeUp.direction = .Up
+        view.addGestureRecognizer(swipeUp)
+        
+        assignBackground()
     }
 
     override func didReceiveMemoryWarning() {

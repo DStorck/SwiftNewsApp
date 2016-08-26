@@ -32,13 +32,15 @@ class ArticlesViewController: UIViewController {
     var swipes = 0
     var page = 1
     
-    @IBAction func goToSavedArticles(sender: AnyObject) {
-    }
+    @IBAction func goToSavedArticles(sender: AnyObject) {}
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func save(sender: AnyObject) {}
     @IBOutlet weak var swipeLeftTest: UILabel!
+    @IBOutlet weak var articleTitle: UILabel!
     
+    
+    //sets up info view controller as chid VC
     @IBAction func info(sender: AnyObject) {
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("infoPopUp") as! PopUpViewController
         self.addChildViewController(popUpVC)
@@ -87,8 +89,6 @@ class ArticlesViewController: UIViewController {
                         self.articles.append(tit)
                         self.article_dict[tit] = guard_url
                     }
-                    print(requestURL)
-                    print(self.articles)
                     self.self.saveButton.enabled = true
                     
                     if self.articles.count == 0 {
@@ -104,16 +104,16 @@ class ArticlesViewController: UIViewController {
                 self.saveButton.enabled = false
                 self.activityIndicator.stopAnimating()
                 self.articleTitle.text = "NO WIFI"
-                
             }
         }
     }
     
+    //iterate through article array to show next title
     func showCurrentTitle(ind: Int) {
         self.articleTitle.text = self.articles[swipes]
     }
     
-    
+    //ensure that user can't save article before it loads
     override func viewWillAppear(animated: Bool) {
         if articles.count == 0 {
         saveButton.enabled = false
@@ -126,14 +126,15 @@ class ArticlesViewController: UIViewController {
         self.title = ""
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
-        self.saveButton.layer.cornerRadius = 10;
+        self.saveButton.layer.cornerRadius = 10
+        
         if swipes == 0 {
-            print("count: \(articles.count)")
             updateArticleArray()
         } else {
            showCurrentTitle(swipes)
         }
         
+        //set up gesture recognizers
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ArticlesViewController.newArticleTitle(_:)))
         swipeRight.direction = .Right
         view.addGestureRecognizer(swipeRight)
@@ -154,7 +155,6 @@ class ArticlesViewController: UIViewController {
     
     func newArticleTitle(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Right {
-            print("swiped left")
             self.swipes += 1
             if articles.count == 0 {
                performSegueWithIdentifier("home", sender: nil)
@@ -168,7 +168,6 @@ class ArticlesViewController: UIViewController {
     
     func showFullArticle(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Left && articles.count != 0 {
-            print("swiped right")
             performSegueWithIdentifier("fullArticle", sender: nil)
         } else {
             performSegueWithIdentifier("home", sender: nil)
@@ -177,22 +176,17 @@ class ArticlesViewController: UIViewController {
     
     func goHome(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Down {
-            print("swiped down")
             performSegueWithIdentifier("home", sender: nil)
         }
     }
     
     func search(sender: UISwipeGestureRecognizer) {
         if sender.direction == .Up {
-            print("swiped up")
             performSegueWithIdentifier("search", sender: nil)
         }
     }
     
     
-    @IBOutlet weak var articleTitle: UILabel!
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
