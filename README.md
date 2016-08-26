@@ -14,7 +14,8 @@ A Swift/Xcode App to allow users to find articles to read or save for later.
 
 ## Demo
 ![](http://i.imgur.com/IkzszYJ.gif)
-![](http://i.imgur.com/dGjhMtA.gif)
+![](http://i.imgur.com/BH5QV1n.gif)
+
 
 ### Contributing
 
