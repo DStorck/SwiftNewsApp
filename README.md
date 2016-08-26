@@ -13,8 +13,7 @@ A Swift/Xcode App to allow users to find articles to read or save for later.
 4. Open `NewsApp.xcworkspace` in Xcode
 
 ## Demo
-![](http://i.imgur.com/fngeJxL.gif)
-
+![](http://i.imgur.com/SZmLUUi.gifv)
 ### Contributing
 
 Please feel free to contribute to this project by submitting a pull request or opening up an issue. I an not planning to put this on the App Store, but would love feedback. This was a final project for ADA Developers Academy Cohort 5 in Seattle, WA.
