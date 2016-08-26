@@ -16,7 +16,6 @@ class FullArticleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("in full aritcle controller - url: \(article_url)")
         
         let url = NSURL(string: self.article_url)
         let request = NSURLRequest(URL: url!)

@@ -20,9 +20,11 @@ class SavedArticlesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Saved Articles"
+        //allow for titles to be multiple lines
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         
+        //create instance of Realm Article
         realm_articles = realm.objects(Article)
         let article = Article()
         article.title = article_title

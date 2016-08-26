@@ -22,7 +22,6 @@ class PopUpViewController: UIViewController {
         self.closeButton.layer.cornerRadius = 10
         self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
         self.infoLabel.text = "Swipe left to read article. \n\nSwipe right to search through more articles.  \n\nSwipe up to enter your own search term.  \n\nSwipe down to return to the home screen."
-
     }
 
     override func didReceiveMemoryWarning() {

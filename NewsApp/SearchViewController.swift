@@ -11,13 +11,9 @@ import UIKit
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchButton: UIButton!
-   
-    
     @IBOutlet weak var searchInput: UITextField!
-    
     @IBAction func doSearch(sender: AnyObject) {
         var input = String(searchInput.text)
-        print("input please:\(input)")
     }
     
     
@@ -31,7 +27,6 @@ class SearchViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         let DestViewController: ArticlesViewController = segue.destinationViewController as! ArticlesViewController
             DestViewController.newsCategory = NewsCategory(rawValue: (sender?.tag)!)!
             DestViewController.searchTerm = searchInput.text!
