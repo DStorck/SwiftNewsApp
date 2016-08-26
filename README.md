@@ -13,8 +13,7 @@ A Swift/Xcode App to allow users to find articles to read or save for later.
 4. Open `NewsApp.xcworkspace` in Xcode
 
 ## Demo
-![](http://i.imgur.com/IkzszYJ.gif)
-![](http://i.imgur.com/BH5QV1n.gif)
+![](http://i.imgur.com/BH5QV1n.gifv)
 
 
 ### Contributing
