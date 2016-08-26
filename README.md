@@ -1,5 +1,5 @@
 
-[](http://i.imgur.com/nhSl84N.png)
+![](http://i.imgur.com/nhSl84N.png)
 #CATCH UP! An IOS News App
 
 A Swift/Xcode App to allow users to find articles to read or save for later.
