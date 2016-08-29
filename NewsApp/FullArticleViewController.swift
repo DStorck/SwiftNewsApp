@@ -8,11 +8,19 @@
 
 import UIKit
 
-class FullArticleViewController: UIViewController {
+class FullArticleViewController: UIViewController , UIWebViewDelegate{
     
     var article_url = String()
     
     @IBOutlet var webView: UIWebView!
+    
+    @IBAction func warning(sender: AnyObject) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("noWifi") as! NoWifiViewController
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view )
+        popUpVC.didMoveToParentViewController(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +29,17 @@ class FullArticleViewController: UIViewController {
         let request = NSURLRequest(URL: url!)
         
         webView.loadRequest(request)
+        webView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-  
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        print("webview did fail load with error")
+        warning(self)
+    }
+
 
 }

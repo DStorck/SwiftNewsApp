@@ -203,6 +203,52 @@
             </objects>
             <point key="canvasLocation" x="2221.5" y="-543.5"/>
         </scene>
+        <!--No Wifi View Controller-->
+        <scene sceneID="K3L-Gj-K5f">
+            <objects>
+                <viewController storyboardIdentifier="noWifi" id="x31-1d-3Nc" customClass="NoWifiViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Md0-SX-iAD"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Zv-Ln-e87"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bbJ-nL-65E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gl-fX-Rfb">
+                                <rect key="frame" x="40" y="118" width="295" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NO INTERNET CONNECTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjf-U7-Lwt">
+                                        <rect key="frame" x="21" y="33" width="252" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14258067660000001" blue="0.069337859289999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="med-Be-qsW">
+                                <rect key="frame" x="164" y="397" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14258067660000001" blue="0.069337859289999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeWarning:" destination="x31-1d-3Nc" eventType="touchUpInside" id="onV-3m-uCf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="closeButton" destination="med-Be-qsW" id="okO-Nw-BFv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GhU-zb-3My" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2924.5" y="357.5"/>
+        </scene>
         <!--articleViewController-->
         <scene sceneID="ejH-rX-eYY">
             <objects>
