@@ -17,18 +17,20 @@ class NoWifiViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        
-       
         super.viewDidLoad()
         self.closeButton.layer.cornerRadius = 10
         self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       segue.destinationViewController as! ViewController
+    }
+
     
 
 

@@ -36,7 +36,6 @@ class ArticlesViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func save(sender: AnyObject) {}
-    @IBOutlet weak var swipeLeftTest: UILabel!
     @IBOutlet weak var articleTitle: UILabel!
     
     

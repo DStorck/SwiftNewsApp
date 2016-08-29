@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("main page loaded")
         
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.search(_:)))
         swipeUp.direction = .Up
