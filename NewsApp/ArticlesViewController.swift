@@ -89,13 +89,15 @@ class ArticlesViewController: UIViewController {
                         self.article_dict[tit] = guard_url
                     }
                     self.self.saveButton.enabled = true
-                    
+                    print("URL \(requestURL)")
+                    self.activityIndicator.stopAnimating()
                     if self.articles.count == 0 {
                         self.articleTitle.text = "Sorry, no articles matched that search term"
+//                        self.activityIndicator.stopAnimating()
                     } else {
                     self.articleTitle.text = self.articles[self.swipes]
                     self.page += 1
-                    self.activityIndicator.stopAnimating()
+//                    self.activityIndicator.stopAnimating()
                     }
                 }
             case .Failure(let error):

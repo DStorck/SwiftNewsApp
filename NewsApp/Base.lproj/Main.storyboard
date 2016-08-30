@@ -51,8 +51,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-jt-HFC">
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
-                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.55000000000000004" height="1"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="1"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
+                                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                                 <inset key="imageEdgeInsets" minX="40" minY="30" maxX="20" maxY="30"/>
                                                 <state key="normal" image="globe2"/>
                                                 <userDefinedRuntimeAttributes>
@@ -91,7 +92,7 @@
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-6S-gha">
                                                 <rect key="frame" x="172" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
-                                                <inset key="contentEdgeInsets" minX="20" minY="30" maxX="40" maxY="30"/>
+                                                <inset key="contentEdgeInsets" minX="27" minY="35" maxX="40" maxY="30"/>
                                                 <state key="normal" image="pol-real"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="pol" id="cYk-wr-CKe"/>
@@ -105,7 +106,7 @@
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-N3-AKb">
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="80"/>
-                                                <inset key="contentEdgeInsets" minX="50" minY="30" maxX="30" maxY="30"/>
+                                                <inset key="contentEdgeInsets" minX="55" minY="35" maxX="30" maxY="35"/>
                                                 <state key="normal" image="science"/>
                                                 <connections>
                                                     <segue destination="uTI-rj-Vy2" kind="show" identifier="science" id="IKH-B9-jjv"/>
@@ -515,7 +516,7 @@
         <segue reference="bDf-ro-wlo"/>
         <segue reference="ysi-Tn-u3q"/>
         <segue reference="mbd-5U-spJ"/>
-        <segue reference="MN4-Fr-s8u"/>
-        <segue reference="vUH-Ub-Suh"/>
+        <segue reference="iuQ-2c-Gle"/>
+        <segue reference="egK-Zb-Ki6"/>
     </inferredMetricsTieBreakers>
 </document>
